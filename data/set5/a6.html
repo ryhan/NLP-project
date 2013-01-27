@@ -1,0 +1,228 @@
+
+<!-- saved from url=(0051)https://www.ark.cs.cmu.edu/NLP/S13/data/set5/a6.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Lisp (programming language)</title>
+<link rel="original" href="http://en.wikipedia.org/wiki/Lisp_(programming_language)">
+</head>
+<body>
+<h1>Lisp (programming language)</h1>
+<p><b>Lisp</b> (historically, <b>LISP</b>) is a family of computer programming languages with a long history and a distinctive, fully parenthesized Polish prefix notation. Originally specified in 1958, Lisp is the second-oldest high-level programming language in widespread use today; only Fortran is older (by one year). Like Fortran, Lisp has changed a great deal since its early days, and a number of dialects have existed over its history. Today, the most widely known general-purpose Lisp dialects are Common Lisp and Scheme.</p>
+<p>Lisp was originally created as a practical mathematical notation for computer programs, influenced by the notation of Alonzo Church's lambda calculus. It quickly became the favored programming language for artificial intelligence (AI) research. As one of the earliest programming languages, Lisp pioneered many ideas in computer science, including tree data structures, automatic storage management, dynamic typing, and the self-hosting compiler.</p>
+<p>The name <i>LISP</i> derives from "LISt Processing". Linked lists are one of Lisp language's major data structures, and Lisp source code is itself made up of lists. As a result, Lisp programs can manipulate source code as a data structure, giving rise to the macro systems that allow programmers to create new syntax or even new domain-specific languages embedded in Lisp.</p>
+<p>The interchangeability of code and data also gives Lisp its instantly recognizable syntax. All program code is written as <i>s-expressions</i>, or parenthesized lists. A function call or syntactic form is written as a list with the function or operator's name first, and the arguments following; for instance, a function f that takes three arguments might be called using (f arg1 arg2 arg3).</p>
+<h2> History</h2>
+
+<p>Lisp was invented by John McCarthy in 1958 while he was at the Massachusetts Institute of Technology (MIT). McCarthy published its design in a paper in <i>Communications of the ACM</i> in 1960, entitled "Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I" ("Part II" was never published). He showed that with a few simple operators and a notation for functions, one can build a Turing-complete language for algorithms.</p>
+<p>Information Processing Language was the first AI language, from 1955 or 1956, and already included many of the concepts, such as list-processing and recursion, which came to be used in Lisp.</p>
+<p>McCarthy's original notation used bracketed "M-expressions" that would be translated into S-expressions. As an example, the M-expression car[cons[A,B]] is equivalent to the S-expression (car (cons A B)). Once Lisp was implemented, programmers rapidly chose to use S-expressions, and M-expressions were abandoned. M-expressions surfaced again with short-lived attempts of MLISP by Horace Enea and CGOL by Vaughan Pratt.</p>
+
+<p>Lisp was first implemented by Steve Russell on an IBM 704 computer. Russell had read McCarthy's paper, and realized (to McCarthy's surprise) that the Lisp <i>eval</i> function could be implemented in machine code. The result was a working Lisp interpreter which could be used to run Lisp programs, or more properly, 'evaluate Lisp expressions.'</p>
+<p>Two assembly language macros for the IBM 704 became the primitive operations for decomposing lists: car (Contents of the Address part of Register number) and cdr (Contents of the Decrement part of Register number). From the context, it is clear that the term "Register" is used here to mean "Memory Register", nowadays called "Memory Location". Lisp dialects still use car and cdr (<small>pron.:</small> /ˈkɑr/ and /ˈkʊdər/) for the operations that return the first item in a list and the rest of the list respectively.</p>
+<p>The first complete Lisp compiler, written in Lisp, was implemented in 1962 by Tim Hart and Mike Levin at MIT. This compiler introduced the Lisp model of incremental compilation, in which compiled and interpreted functions can intermix freely. The language used in Hart and Levin's memo is much closer to modern Lisp style than McCarthy's earlier code.</p>
+<p>Lisp was a difficult system to implement with the compiler techniques and stock hardware of the 1970s. Garbage collection routines, developed by then-MIT graduate student Daniel Edwards, made it practical to run Lisp on general-purpose computing systems, but efficiency was still a problem.<sup class="Template-Fact" style="white-space:nowrap;">[<i>citation needed</i>]</sup> This led to the creation of Lisp machines: dedicated hardware for running Lisp environments and programs. Advances in both computer hardware and compiler technology soon made Lisp machines obsolete.<sup class="Template-Fact" style="white-space:nowrap;">[<i>citation needed</i>]</sup></p>
+<p>During the 1980s and 1990s, a great effort was made to unify the work on new Lisp dialects (mostly successors to Maclisp like ZetaLisp and NIL (New Implementation of Lisp)) into a single language. The new language, Common Lisp, was somewhat compatible with the dialects it replaced (the book Common Lisp the Language notes the compatibility of various constructs). In 1994, ANSI published the Common Lisp standard, "ANSI X3.226-1994 Information Technology Programming Language Common Lisp."</p>
+<p><br></p>
+<h3> Connection to artificial intelligence</h3>
+<p>Since its inception, Lisp was closely connected with the artificial intelligence research community, especially on PDP-10 systems. Lisp was used as the implementation of the programming language Micro Planner which was used in the famous AI system SHRDLU. In the 1970s, as AI research spawned commercial offshoots, the performance of existing Lisp systems became a growing issue.<sup class="Template-Fact" style="white-space:nowrap;">[<i>citation needed</i>]</sup></p>
+<h3> Genealogy and variants</h3>
+<p>Over its fifty-year history, Lisp has spawned many variations on the core theme of an S-expression language. Moreover, each given dialect may have several implementations—for instance, there are more than a dozen implementations of Common Lisp.</p>
+<p>Differences between dialects may be quite visible—for instance, Common Lisp uses the keyword <code>defun</code> to name a function, but Scheme uses <code>define</code>. Within a dialect that is standardized, however, conforming implementations support the same core language, but with different extensions and libraries.</p>
+<h4> Historically significant dialects</h4>
+
+<ul><li>LISP 1 – First implementation.</li>
+<li>LISP 1.5 – First widely distributed version, developed by McCarthy and others at MIT. So named because it contained several improvements on the original "LISP 1" interpreter, but was not a major restructuring as the planned LISP 2 would be.</li>
+<li>Stanford LISP 1.6 – This was a successor to LISP 1.5 developed at the Stanford AI Lab, and widely distributed to PDP-10 systems running the TOPS-10 operating system. It was rendered obsolete by Maclisp and InterLisp.</li>
+<li>MACLISP – developed for MIT's Project MAC (no relation to Apple's Macintosh, nor to McCarthy), direct descendant of LISP 1.5. It ran on the PDP-10 and Multics systems. (MACLISP would later come to be called Maclisp, and is often referred to as MacLisp.)</li>
+<li>InterLisp – developed at BBN Technologies for PDP-10 systems running the Tenex operating system, later adopted as a "West coast" Lisp for the Xerox Lisp machines as InterLisp-D. A small version called "InterLISP 65" was published for Atari's 6502-based computer line. For quite some time Maclisp and InterLisp were strong competitors.</li>
+<li>Franz Lisp – originally a Berkeley project; later developed by Franz Inc. The name is a humorous deformation of the name "Franz Liszt", and does not refer to Allegro Common Lisp, the dialect of Common Lisp sold by Franz Inc., in more recent years.</li>
+<li>XLISP, which AutoLISP was based on.</li>
+<li>Standard Lisp and Portable Standard Lisp were widely used and ported, especially with the Computer Algebra System REDUCE.</li>
+<li>ZetaLisp, also known as Lisp Machine Lisp – used on the Lisp machines, direct descendant of Maclisp. ZetaLisp had big influence on Common Lisp.</li>
+<li>LeLisp is a French Lisp dialect. One of the first Interface Builders was written in LeLisp.</li>
+<li>Common Lisp (1984), as described by <i>Common Lisp the Language</i> – a consolidation of several divergent attempts (ZetaLisp, Spice Lisp, NIL, and S-1 Lisp) to create successor dialects to Maclisp, with substantive influences from the Scheme dialect as well. This version of Common Lisp was available for wide-ranging platforms and was accepted by many as a de facto standard until the publication of ANSI Common Lisp (ANSI X3.226-1994).</li>
+<li>Dylan was in its first version a mix of Scheme with the Common Lisp Object System.</li>
+<li>EuLisp – attempt to develop a new efficient and cleaned-up Lisp.</li>
+<li>ISLISP – attempt to develop a new efficient and cleaned-up Lisp. Standardized as ISO/IEC 13816:1997 and later revised as ISO/IEC 13816:2007:<i>Information technology – Programming languages, their environments and system software interfaces – Programming language ISLISP</i>.</li>
+<li>IEEE Scheme – IEEE standard, 1178–1990 (R1995)</li>
+<li>ANSI Common Lisp – an American National Standards Institute (ANSI) standard for Common Lisp, created by subcommittee X3J13, chartered to begin with <i>Common Lisp: The Language</i> as a base document and to work through a public consensus process to find solutions to shared issues of portability of programs and compatibility of Common Lisp implementations. Although formally an ANSI standard, the implementation, sale, use, and influence of ANSI Common Lisp has been and continues to be seen worldwide.</li>
+<li>ACL2 or "A Computational Logic for Applicative Common Lisp", an applicative (side-effect free) variant of Common LISP. ACL2 is both a programming language in which you can model computer systems and a tool to help proving properties of those models.</li>
+</ul><h3> Since 2000</h3>
+<p>After having declined somewhat in the 1990s, Lisp has recently experienced a resurgence of interest. Most new activity is focused around open source implementations of Common Lisp, and includes the development of new portable libraries and applications. A new print edition of <i>Practical Common Lisp</i> by Peter Seibel, a tutorial for new Lisp programmers, was published in 2005.</p>
+<p>Many new Lisp programmers were inspired by writers such as Paul Graham and Eric S. Raymond to pursue a language others considered antiquated. New Lisp programmers often describe the language as an eye-opening experience and claim to be substantially more productive than in other languages. This increase in awareness may be contrasted to the "AI winter" and Lisp's brief gain in the mid-1990s.</p>
+<p>Dan Weinreb lists in his survey of Common Lisp implementations eleven actively maintained Common Lisp implementations. Scieneer Common Lisp is a new commercial implementation forked from CMUCL with a first release in 2002.</p>
+<p>The open source community has created new supporting infrastructure: CLiki is a wiki that collects Common Lisp related information, the Common Lisp directory lists resources, #lisp is a popular IRC channel (with support by a Lisp-written Bot), lisppaste supports the sharing and commenting of code snippets, Planet Lisp collects the contents of various Lisp-related blogs, on LispForum users discuss Lisp topics, Lispjobs is a service for announcing job offers and there is a weekly news service, <i>Weekly Lisp News</i>. <i>Common-lisp.net</i> is a hosting site for open source Common Lisp projects.</p>
+<p>50 years of Lisp (1958–2008) has been celebrated at LISP50@OOPSLA. There are regular local user meetings in Boston, Vancouver, and Hamburg. Other events include the European Common Lisp Meeting, the European Lisp Symposium and an International Lisp Conference.</p>
+<p>The Scheme community actively maintains over twenty implementations. Several significant new implementations (Chicken, Gambit, Gauche, Ikarus, Larceny, Ypsilon) have been developed in the last few years. The Revised<sup>5</sup> Report on the Algorithmic Language Scheme standard of Scheme was widely accepted in the Scheme community. The Scheme Requests for Implementation process has created a lot of quasi standard libraries and extensions for Scheme. User communities of individual Scheme implementations continue to grow. A new language standardization process was started in 2003 and led to the R<sup>6</sup>RS Scheme standard in 2007. Academic use of Scheme for teaching computer science seems to have declined somewhat. Some universities are no longer using Scheme in their computer science introductory courses.<sup class="Template-Fact" style="white-space:nowrap;">[<i>citation needed</i>]</sup></p>
+<p>There are several new dialects of Lisp: Arc, Nu, and Clojure.</p>
+<h2> Major dialects</h2>
+<p>The two major dialects of Lisp used for general-purpose programming today are Common Lisp and Scheme. These languages represent significantly different design choices.</p>
+<p>Common Lisp is a successor to MacLisp. The primary influences were Lisp Machine Lisp, MacLisp, NIL, S-1 Lisp, Spice Lisp, and Scheme. It has many of the features of Lisp Machine Lisp (a large Lisp dialect used to program Lisp Machines), but was designed to be efficiently implementable on any personal computer or workstation. Common Lisp has a large language standard including many built-in data types, functions, macros and other language elements, as well as an object system (Common Lisp Object System or shorter CLOS). Common Lisp also borrowed certain features from Scheme such as lexical scoping and lexical closures.</p>
+<p>Scheme (designed earlier) is a more minimalist design, with a much smaller set of standard features but with certain implementation features (such as tail-call optimization and full continuations) not necessarily found in Common Lisp.</p>
+<p>Scheme is a statically scoped and properly tail-recursive dialect of the Lisp programming language invented by Guy Lewis Steele Jr. and Gerald Jay Sussman. It was designed to have exceptionally clear and simple semantics and few different ways to form expressions. A wide variety of programming paradigms, including imperative, functional, and message passing styles, find convenient expression in Scheme. Scheme continues to evolve with a series of standards (Revised<sup>n</sup> Report on the Algorithmic Language Scheme) and a series of Scheme Requests for Implementation.</p>
+<p>Clojure is a recent dialect of Lisp that principally targets the Java Virtual Machine, as well as the CLR, the Python VM, and compiling to JavaScript. It is designed to be a pragmatic general-purpose language. Clojure draws considerable influences from Haskell and places a very strong emphasis on immutability. Clojure is a compiled language, as it compiles directly to JVM bytecode, yet remains completely dynamic. Every feature supported by Clojure is supported at runtime. Clojure provides access to Java frameworks and libraries, with optional type hints and type inference, so that calls to Java can avoid reflection and enable fast primitive operations.</p>
+<p>In addition, Lisp dialects are used as scripting languages in a number of applications, with the most well-known being Emacs Lisp in the Emacs editor, AutoLisp and later Visual Lisp in AutoCAD, Nyquist in Audacity. The small size of a minimal but useful Scheme interpreter makes it particularly popular for embedded scripting. Examples include SIOD and TinyScheme, both of which have been successfully embedded in the GIMP image processor under the generic name "Script-fu". LIBREP, a Lisp interpreter by John Harper originally based on the Emacs Lisp language, has been embedded in the Sawfish window manager. The Guile interpreter is used in GnuCash. Within GCC, the MELT plugin provides a Lisp-y dialect, translated into C, to extend the compiler by coding additional passes (in MELT).</p>
+<h2> Language innovations</h2>
+<p>Lisp was the first homoiconic programming language: the primary representation of program code is the same type of list structure that is also used for the main data structures. As a result, Lisp functions can be manipulated, altered or even created within a Lisp program without extensive parsing or manipulation of binary machine code. This is generally considered one of the primary advantages of the language with regard to its expressive power, and makes the language amenable to metacircular evaluation.</p>
+<p>The ubiquitous <i>if-then-else</i> structure, now taken for granted as an essential element of any programming language, was invented by McCarthy for use in Lisp, where it saw its first appearance in a more general form (the cond structure). It was inherited by ALGOL, which popularized it.</p>
+<p>Lisp deeply influenced Alan Kay, the leader of the research on Smalltalk, and then in turn Lisp was influenced by Smalltalk, by adopting object-oriented programming features (classes, instances, etc.) in the late 1970s. The Flavours object system (later CLOS) introduced multiple inheritance.</p>
+<p>Lisp introduced the concept of automatic garbage collection, in which the system walks the heap looking for unused memory. Most of the modern sophisticated garbage collection algorithms such as generational garbage collection were developed for Lisp.</p>
+<p>Largely because of its resource requirements with respect to early computing hardware (including early microprocessors), Lisp did not become as popular outside of the AI community as Fortran and the ALGOL-descended C language. Newer languages such as Java and Python have incorporated some limited versions of some of the features of Lisp, but are necessarily unable to bring the coherence and synergy of the full concepts found in Lisp. Because of its suitability to complex and dynamic applications, Lisp is currently enjoying some resurgence of popular interest.</p>
+<h2> Syntax and semantics</h2>
+<dl><dd><i><b>Note</b>: This article's examples are written in Common Lisp (though most are also valid in Scheme).</i></dd>
+</dl><h3> Symbolic expressions (S-expressions)</h3>
+<p>Lisp is an expression-oriented language. Unlike most other languages, no distinction is made between "expressions" and "statements"; all code and data are written as expressions. When an expression is <i>evaluated</i>, it produces a value (in Common Lisp, possibly multiple values), which then can be embedded into other expressions. Each value can be any data type.</p>
+<p>McCarthy's 1958 paper introduced two types of syntax: S-expressions (Symbolic expressions, also called "sexps"), which mirror the internal representation of code and data; and M-expressions (Meta Expressions), which express functions of S-expressions. M-expressions never found favor, and almost all Lisps today use S-expressions to manipulate both code and data.</p>
+<p>The use of parentheses is Lisp's most immediately obvious difference from other programming language families. As a result, students have long given Lisp nicknames such as <i>Lost In Stupid Parentheses</i>, or <i>Lots of Irritating Superfluous Parentheses</i>. However, the S-expression syntax is also responsible for much of Lisp's power: the syntax is extremely regular, which facilitates manipulation by computer. However, the syntax of Lisp is not limited to traditional parentheses notation. It can be extended to include alternative notations. XMLisp, for instance, is a Common Lisp extension that employs the metaobject-protocol to integrate S-expressions with the Extensible Markup Language (XML).</p>
+<p>The reliance on expressions gives the language great flexibility. Because Lisp functions are themselves written as lists, they can be processed exactly like data. This allows easy writing of programs which manipulate other programs (metaprogramming). Many Lisp dialects exploit this feature using macro systems, which enables extension of the language almost without limit.</p>
+<h3> Lists</h3>
+<p>A Lisp list is written with its elements separated by whitespace, and surrounded by parentheses. For example, (1 2 foo) is a list whose elements are three <i>atoms</i>: the values 1, 2, and foo. These values are implicitly typed: they are respectively two integers and a Lisp-specific data type called a "symbolic atoms", and do not have to be declared as such.</p>
+<p>The empty list () is also represented as the special atom nil. This is the only entity in Lisp which is both an atom and a list.</p>
+<p>Expressions are written as lists, using prefix notation. The first element in the list is the name of a <i>form</i>, i.e., a function, operator, macro, or "special operator" (see below.) The remainder of the list are the arguments. For example, the function list returns its arguments as a list, so the expression</p>
+
+<p>evaluates to the list (1 2 foo). The "quote" before the arguments in the preceding example is a "special operator" which prevents the quoted arguments from being evaluated (not strictly necessary for the numbers, since 1 evaluates to 1, etc.). Any unquoted expressions are recursively evaluated before the enclosing expression is evaluated. For example,</p>
+
+<p>evaluates to the list (1 2 (3 4)). Note that the third argument is a list; lists can be nested.</p>
+<h3> Operators</h3>
+<p>Arithmetic operators are treated similarly. The expression</p>
+
+<p>evaluates to 10. The equivalent under infix notation would be "1 + 2 + 3 + 4". Arithmetic operators in Lisp are variadic (or <i>n-ary</i>), able to take any number of arguments.</p>
+<p>"Special operators" (sometimes called "special forms") provide Lisp's control structure. For example, the special operator if takes three arguments. If the first argument is non-nil, it evaluates to the second argument; otherwise, it evaluates to the third argument. Thus, the expression</p>
+
+<p>evaluates to (3 4 "bar"). Of course, this would be more useful if a non-trivial expression had been substituted in place of nil.</p>
+<h3> Lambda expressions</h3>
+<p>Another special operator, lambda, is used to bind variables to values which are then evaluated within an expression. This operator is also used to create functions: the arguments to lambda are a list of arguments, and the expression or expressions to which the function evaluates (the returned value is the value of the last expression that is evaluated). The expression</p>
+
+<p>evaluates to a function that, when applied, takes one argument, binds it to arg and returns the number one greater than that argument. Lambda expressions are treated no differently from named functions; they are invoked the same way. Therefore, the expression</p>
+
+<p>evaluates to 6.</p>
+<h3> Atoms</h3>
+<p>In the original <b>LISP</b> there were two fundamental data types: atoms and lists. A list was a finite ordered sequence of elements, where each element is in itself either an atom or a list, and an atom was a number or a symbol. A symbol was essentially a unique named item, written as an Alphanumeric string in source code, and used either as a variable name or as a data item in symbolic processing. For example, the list (FOO (BAR 1) 2) contains three elements: the symbol FOO, the list (BAR 1), and the number 2.</p>
+<p>The essential difference between atoms and lists was that atoms were immutable and unique. Two atoms that appeared in different places in source code but were written in exactly the same way represented the same object<sup class="Template-Fact" style="white-space:nowrap;">[<i>citation needed</i>]</sup>, whereas each list was a separate object that could be altered independently of other lists and could be distinguished from other lists by comparison operators.</p>
+<p>As more data types were introduced in later Lisp dialects, and programming styles evolved, the concept of an atom lost importance.<sup class="Template-Fact" style="white-space:nowrap;">[<i>citation needed</i>]</sup> Many dialects still retained the predicate <i>atom</i> for legacy compatibility<sup class="Template-Fact" style="white-space:nowrap;">[<i>citation needed</i>]</sup>, defining it true for any object which is not a cons.</p>
+<h3> Conses and lists</h3>
+
+
+<p>A Lisp list is a singly linked list. Each cell of this list is called a <i>cons</i> (in Scheme, a <i>pair</i>), and is composed of two pointers, called the <i>car</i> and <i>cdr</i>. These are equivalent to the data and next fields discussed in the article <i>linked list</i>, respectively.</p>
+<p>Of the many data structures that can be built out of cons cells, one of the most basic is called a <i>proper list</i>. A proper list is either the special nil (empty list) symbol, or a cons in which the car points to a datum (which may be another cons structure, such as a list), and the cdr points to another proper list.</p>
+<p>If a given cons is taken to be the head of a linked list, then its car points to the first element of the list, and its cdr points to the rest of the list. For this reason, the car and cdr functions are also called first and rest when referring to conses which are part of a linked list (rather than, say, a tree).</p>
+<p>Thus, a Lisp list is not an atomic object, as an instance of a container class in C++ or Java would be. A list is nothing more than an aggregate of linked conses. A variable which refers to a given list is simply a pointer to the first cons in the list. Traversal of a list can be done by "cdring down" the list; that is, taking successive cdrs to visit each cons of the list; or by using any of a number of higher-order functions to map a function over a list.</p>
+<p>Because conses and lists are so universal in Lisp systems, it is a common misconception that they are Lisp's only data structures. In fact, all but the most simplistic Lisps have other data structures – such as vectors (arrays), hash tables, structures, and so forth.</p>
+<h4> S-expressions represent lists</h4>
+<p>Parenthesized S-expressions represent linked list structures. There are several ways to represent the same list as an S-expression. A cons can be written in <i>dotted-pair notation</i> as (a . b), where a is the car and b the cdr. A longer proper list might be written (a . (b . (c . (d . nil)))) in dotted-pair notation. This is conventionally abbreviated as (a b c d) in <i>list notation</i>. An improper list may be written in a combination of the two – as (a b c . d) for the list of three conses whose last cdr is d (i.e., the list (a . (b . (c . d))) in fully specified form).</p>
+<h4> List-processing procedures</h4>
+<p>Lisp provides many built-in procedures for accessing and controlling lists. Lists can be created directly with the list procedure, which takes any number of arguments, and returns the list of these arguments.</p>
+
+
+<p>Because of the way that lists are constructed from cons pairs, the [[cons]] procedure can be used to add an element to the front of a list. Note that the cons procedure is asymmetric in how it handles list arguments, because of how lists are constructed.</p>
+
+
+<p>The [[append]] procedure appends two (or more) lists to one another. Because Lisp lists are linked lists, appending two lists has asymptotic time complexity [O(n)]</p>
+
+
+<h4> Shared structure</h4>
+<p>Lisp lists, being simple linked lists, can share structure with one another. That is to say, two lists can have the same <i>tail</i>, or final sequence of conses. For instance, after the execution of the following Common Lisp code:</p>
+
+<p>the lists foo and bar are (a b c) and (x b c) respectively. However, the tail (b c) is the same structure in both lists. It is not a copy; the cons cells pointing to b and c are in the same memory locations for both lists.</p>
+<p>Sharing structure rather than copying can give a dramatic performance improvement. However, this technique can interact in undesired ways with functions that alter lists passed to them as arguments. Altering one list, such as by replacing the c with a goose, will affect the other:</p>
+
+<p>This changes foo to (a b goose), but thereby also changes bar to (x b goose) – a possibly unexpected result. This can be a source of bugs, and functions which alter their arguments are documented as <i>destructive</i> for this very reason.</p>
+<p>Aficionados of functional programming avoid destructive functions. In the Scheme dialect, which favors the functional style, the names of destructive functions are marked with a cautionary exclamation point, or "bang"—such as set-car! (read <i>set car bang</i>), which replaces the car of a cons. In the Common Lisp dialect, destructive functions are commonplace; the equivalent of set-car! is named rplaca for "replace car." This function is rarely seen however as Common Lisp includes a special facility, setf, to make it easier to define and use destructive functions. A frequent style in Common Lisp is to write code functionally (without destructive calls) when prototyping, then to add destructive calls as an optimization where it is safe to do so.</p>
+<h3> Self-evaluating forms and quoting</h3>
+<p>Lisp evaluates expressions which are entered by the user. Symbols and lists evaluate to some other (usually, simpler) expression – for instance, a symbol evaluates to the value of the variable it names; (+ 2 3) evaluates to 5. However, most other forms evaluate to themselves: if you enter 5 into Lisp, it returns 5.</p>
+<p>Any expression can also be marked to prevent it from being evaluated (as is necessary for symbols and lists). This is the role of the quote special operator, or its abbreviation ' (a single quotation mark). For instance, usually if you enter the symbol foo you will get back the value of the corresponding variable (or an error, if there is no such variable). If you wish to refer to the literal symbol, you enter (quote foo) or, usually, 'foo.</p>
+<p>Both Common Lisp and Scheme also support the <i>backquote</i> operator (known as <i>quasiquote</i> in Scheme), entered with the ` character. This is almost the same as the plain quote, except it allows expressions to be evaluated and their values interpolated into a quoted list with the comma and comma-at operators. If the variable snue has the value (bar baz) then `(foo ,snue) evaluates to (foo (bar baz)), while `(foo ,@snue) evaluates to (foo bar baz). The backquote is most frequently used in defining macro expansions.</p>
+<p>Self-evaluating forms and quoted forms are Lisp's equivalent of literals. It may be possible to modify the values of (mutable) literals in program code. For instance, if a function returns a quoted form, and the code that calls the function modifies the form, this may alter the behavior of the function on subsequent iterations.</p>
+
+<p>Modifying a quoted form like this is generally considered bad style, and is defined by ANSI Common Lisp as erroneous (resulting in "undefined" behavior in compiled files, because the file-compiler can coalesce similar constants, put them in write-protected memory, etc.).</p>
+<p>Lisp's formalization of quotation has been noted by Douglas Hofstadter (in <i>Gödel, Escher, Bach</i>) and others as an example of the philosophical idea of self-reference.</p>
+<h3> Scope and closure</h3>
+<p>The modern Lisp family splits over the use of dynamic or static (aka lexical) scope. Clojure, Common Lisp and Scheme make use of static scoping by default, while Newlisp, Picolisp and the embedded languages in Emacs and AutoCAD use dynamic scoping.</p>
+<h3> List structure of program code; exploitation by macros and compilers</h3>
+<p>A fundamental distinction between Lisp and other languages is that in Lisp, the textual representation of a program is simply a human-readable description of the same internal data structures (linked lists, symbols, number, characters, etc.) as would be used by the underlying Lisp system.</p>
+<p>Lisp uses this to implement a very powerful macro system. Like other macro languages such as C, a macro returns code that can then be compiled. However, unlike C macros, the macros are Lisp functions and so can exploit the full power of Lisp.</p>
+<p>Further, because Lisp code has the same structure as lists, macros can be built with any of the list-processing functions in the language. In short, anything that Lisp can do to a data structure, Lisp macros can do to code. In contrast, in most other languages, the parser's output is purely internal to the language implementation and cannot be manipulated by the programmer.</p>
+<p>This feature makes it easy to develop <i>efficient</i> languages within languages. For example, the Common Lisp Object System can be implemented cleanly as a language extension using macros. This means that if an application requires a different inheritance mechanism, it can use a different object system. This is in stark contrast to most other languages; for example, Java does not support multiple inheritance and there is no reasonable way to add it.</p>
+<p>In simplistic Lisp implementations, this list structure is directly interpreted to run the program; a function is literally a piece of list structure which is traversed by the interpreter in executing it. However, most substantial Lisp systems also include a compiler. The compiler translates list structure into machine code or bytecode for execution. This code can run as fast as code compiled in conventional languages such as C.</p>
+<p>Macros expand before the compilation step, and thus offer some interesting options. If a program needs a precomputed table, then a macro might create the table at compile time, so the compiler need only output the table and need not call code to create the table at run time. Some Lisp implementations even have a mechanism, <code>eval-when</code>, that allows code to be present during compile time (when a macro would need it), but not present in the emitted module.</p>
+<h3> Evaluation and the read–eval–print loop</h3>
+<p>Lisp languages are frequently used with an interactive command line, which may be combined with an integrated development environment. The user types in expressions at the command line, or directs the IDE to transmit them to the Lisp system. Lisp <i>reads</i> the entered expressions, <i>evaluates</i> them, and <i>prints</i> the result. For this reason, the Lisp command line is called a "read–eval–print loop", or <i>REPL</i>.</p>
+<p>The basic operation of the REPL is as follows. This is a simplistic description which omits many elements of a real Lisp, such as quoting and macros.</p>
+<p>The read function accepts textual S-expressions as input, and parses them into an internal data structure. For instance, if you type the text (+ 1 2) at the prompt, read translates this into a linked list with three elements: the symbol +, the number 1, and the number 2. It so happens that this list is also a valid piece of Lisp code; that is, it can be evaluated. This is because the car of the list names a function—the addition operation.</p>
+<p>Note that a foo will be read as a single symbol. 123 will be read as the number 123. "123" will be read as the string "123".</p>
+<p>The eval function evaluates the data, returning zero or more other Lisp data as a result. Evaluation does not have to mean interpretation; some Lisp systems compile every expression to native machine code. It is simple, however, to describe evaluation as interpretation: To evaluate a list whose car names a function, eval first evaluates each of the arguments given in its cdr, then applies the function to the arguments. In this case, the function is addition, and applying it to the argument list (1 2) yields the answer 3. This is the result of the evaluation.</p>
+<p>The symbol foo evaluates to the value of the symbol foo. Data like the string "123" evaluates to the same string. The list (quote (1 2 3)) evaluates to the list (1 2 3).</p>
+<p>It is the job of the print function to represent output to the user. For a simple result such as 3 this is trivial. An expression which evaluated to a piece of list structure would require that print traverse the list and print it out as an S-expression.</p>
+<p>To implement a Lisp REPL, it is necessary only to implement these three functions and an infinite-loop function. (Naturally, the implementation of eval will be complicated, since it must also implement all special operators like if or lambda.) This done, a basic REPL itself is but a single line of code: (loop (print (eval (read)))).</p>
+<p>The Lisp REPL typically also provides input editing, an input history, error handling and an interface to the debugger.</p>
+<p>Lisp is usually evaluated eagerly. In Common Lisp, arguments are evaluated in applicative order ('leftmost innermost'), while in Scheme order of arguments is undefined, leaving room for optimization by a compiler.</p>
+<h3> Control structures</h3>
+<p>Lisp originally had very few control structures, but many more were added during the language's evolution. (Lisp's original conditional operator, cond, is the precursor to later if-then-else structures.)</p>
+<p>Programmers in the Scheme dialect often express loops using tail recursion. Scheme's commonality in academic computer science has led some students to believe that tail recursion is the only, or the most common, way to write iterations in Lisp, but this is incorrect. All frequently seen Lisp dialects have imperative-style iteration constructs, from Scheme's do loop to Common Lisp's complex loop expressions. Moreover, the key issue that makes this an objective rather than subjective matter is that Scheme makes specific requirements for the handling of tail calls, and consequently the reason that the use of tail recursion is generally encouraged for Scheme is that the practice is expressly supported by the language definition itself. By contrast, ANSI Common Lisp does not require the optimization commonly referred to as tail call elimination. Consequently, the fact that tail recursive style as a casual replacement for the use of more traditional iteration constructs (such as do, dolist or loop) is discouraged in Common Lisp is not just a matter of stylistic preference, but potentially one of efficiency (since an apparent tail call in Common Lisp may not compile as a simple jump) and program correctness (since tail recursion may increase stack use in Common Lisp, risking stack overflow).</p>
+<p>Some Lisp control structures are <i>special operators</i>, equivalent to other languages' syntactic keywords. Expressions using these operators have the same surface appearance as function calls, but differ in that the arguments are not necessarily evaluated—or, in the case of an iteration expression, may be evaluated more than once.</p>
+<p>In contrast to most other major programming languages, Lisp allows the programmer to implement control structures using the language itself. Several control structures are implemented as Lisp macros, and can even be macro-expanded by the programmer who wants to know how they work.</p>
+<p>Both Common Lisp and Scheme have operators for non-local control flow. The differences in these operators are some of the deepest differences between the two dialects. Scheme supports <i>re-entrant continuations</i> using the call/cc procedure, which allows a program to save (and later restore) a particular place in execution. Common Lisp does not support re-entrant continuations, but does support several ways of handling escape continuations.</p>
+<p>Frequently, the same algorithm can be expressed in Lisp in either an imperative or a functional style. As noted above, Scheme tends to favor the functional style, using tail recursion and continuations to express control flow. However, imperative style is still quite possible. The style preferred by many Common Lisp programmers may seem more familiar to programmers used to structured languages such as C, while that preferred by Schemers more closely resembles pure-functional languages such as Haskell.</p>
+<p>Because of Lisp's early heritage in list processing, it has a wide array of higher-order functions relating to iteration over sequences. In many cases where an explicit loop would be needed in other languages (like a for loop in C) in Lisp the same task can be accomplished with a higher-order function. (The same is true of many functional programming languages.)</p>
+<p>A good example is a function which in Scheme is called map and in Common Lisp is called mapcar. Given a function and one or more lists, mapcar applies the function successively to the lists' elements in order, collecting the results in a new list:</p>
+
+<p>This applies the + function to each corresponding pair of list elements, yielding the result (11 22 33 44 55).</p>
+<h2> Examples</h2>
+<p>Here are examples of Common Lisp code.</p>
+<p>The basic "Hello world" program:</p>
+
+<p>Lisp syntax lends itself naturally to recursion. Mathematical problems such as the enumeration of recursively defined sets are simple to express in this notation.</p>
+<p>Evaluate a number's factorial:</p>
+
+<p>An alternative implementation, often faster than the previous version if the Lisp system has tail recursion optimization:</p>
+
+<p>Contrast with an iterative version which uses Common Lisp's loop macro:</p>
+
+<p>The following function reverses a list. (Lisp's built-in <i>reverse</i> function does the same thing.)</p>
+
+<h2> Object systems</h2>
+<p>Various object systems and models have been built on top of, alongside, or into Lisp, including:</p>
+<ul><li>The Common Lisp Object System, CLOS, is an integral part of ANSI Common Lisp. CLOS descended from New Flavors and CommonLOOPS. ANSI Common Lisp was the first standardized object-oriented programming language (1994, ANSI X3J13).</li>
+<li>ObjectLisp or Object Lisp, used by Lisp Machines Incorporated and early versions of Macintosh Common Lisp</li>
+<li>LOOPS (Lisp Object-Oriented Programming System) and the later CommonLOOPS</li>
+<li>Flavors, built at MIT, and its descendant New Flavors (developed by Symbolics).</li>
+<li>KR (short for Knowledge Representation), a constraints-based object system developed to aid the writing of Garnet, a GUI library for Common Lisp.</li>
+<li>KEE used an object system called UNITS and integrated it with an inference engine and a truth maintenance system (ATMS).</li>
+</ul><h2> See also</h2>
+<ul><li>Fexpr</li>
+<li>Maxima</li>
+<li>mod_lisp</li>
+<li>P convention</li>
+<li>Prolog</li>
+</ul><h2> References</h2>
+
+<h2> Further reading</h2>
+
+<h2> External links</h2>
+<dl><dt>History</dt>
+</dl><ul><li>History of Lisp – John McCarthy's history of 12 February 1979</li>
+<li>Lisp History – Herbert Stoyan's history compiled from the documents (acknowledged by McCarthy as more complete than his own, see: McCarthy's history links)</li>
+<li>History of LISP at the Computer History Museum</li>
+</ul><dl><dt>Associations and meetings</dt>
+</dl><ul><li>Association of Lisp Users</li>
+<li>European Common Lisp Meeting</li>
+<li>European Lisp Symposium</li>
+<li>International Lisp Conference</li>
+</ul><dl><dt>Books and tutorials</dt>
+</dl><ul><li><i>Casting SPELs in Lisp</i>, a comic-book style introductory tutorial</li>
+<li><i>On Lisp</i>, a free book by Paul Graham</li>
+<li><i>Practical Common Lisp</i>, freeware edition by Peter Seibel</li>
+</ul><dl><dt>Interviews</dt>
+</dl><ul><li>Oral history interview with John McCarthy at Charles Babbage Institute, University of Minnesota, Minneapolis. McCarthy discusses his role in the development of time-sharing at the Massachusetts Institute of Technology. He also describes his work in artificial intelligence (AI) funded by the Advanced Research Projects Agency, including logic-based AI (LISP) and robotics.</li>
+<li>Interview with Richard P. Gabriel (Podcast)</li>
+</ul><dl><dt>Resources</dt>
+</dl><ul><li>CLiki: the common lisp wiki</li>
+<li>Common Lisp directory</li>
+<li>Lisp FAQ Index</li>
+<li>lisppaste</li>
+<li>Planet Lisp</li>
+<li>Weekly Lisp News</li>
+<li>Lisp at the Open Directory Project</li>
+</ul>
+
+</body></html>

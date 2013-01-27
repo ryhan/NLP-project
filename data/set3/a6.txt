@@ -1,0 +1,195 @@
+Latin
+
+
+Latin ([Listen]/ˈlætən/; Latin: lingua latīna; IPA: [ˈlɪŋɡʷa laˈtiːna]) is an Italic language originally spoken in Latium and Ancient Rome. Along with most European languages, it is a descendant of the ancient Proto-Indo-European language. It originated in the Italian peninsula. Although it is considered a dead language, many students, scholars, and members of the Christian clergy speak it fluently, and it is still taught in some primary and secondary and many post-secondary educational institutions around the world. Latin is still used in the creation of new words in modern languages of many different families, including English, and in biological taxonomy. Latin and its daughter Romance languages are the only surviving languages of the Italic language family. Other languages of the Italic branch are attested in the inscriptions of early Italy, but were assimilated to Latin during the Roman Republic.
+The extensive use of elements from vernacular speech by the earliest authors and inscriptions of the Roman Republic make it clear that the original, unwritten language of the Roman Monarchy was an only partially deducible colloquial form, the predecessor to Vulgar Latin. By the late Roman Republic, a standard, literate form had arisen from the speech of the educated, now referred to as Classical Latin. Vulgar Latin, by contrast, is the name given to the more rapidly changing colloquial language spoken throughout the empire. With the Roman conquest, Latin spread to many Mediterranean regions, and the dialects spoken in these areas, mixed to various degrees with the autochthonous languages, developed into the modern Romance tongues. Classical Latin slowly changed with the Decline of the Roman Empire, as education and wealth became ever scarcer. The consequent Medieval Latin, influenced by various Germanic and proto-Romance languages until expurgated by Renaissance scholars, was used as the language of international communication, scholarship and science until well into the 18th century, when it began to be supplanted by vernacular languages.
+Latin is a highly inflected language, with three distinct genders, seven noun cases, four verb conjugations, six tenses, three persons, three moods, two voices, two aspects and two numbers. A dual number ("a pair of") is present in Archaic Latin. One of the rarer of the seven cases is the locative, only marked in proper place names and a few common nouns. Otherwise the locative function ("place where") has merged with the ablative. The vocative, a case of direct address, is marked by an ending only in words of the second declension. Otherwise the vocative has merged with the nominative, except that the particle O typically precedes any vocative, marked or not. There are only five fully productive cases; that is, in the few instances of the formation of a distinct locative or vocative, the endings are specific to those words, and cannot be placed on other stems of the declension to produce a locative or vocative. In contrast, the plural nominative ending of the first declension may be used to form any first declension plural. As a result of this case ambiguity, different authors list different numbers of cases: 5, 6 or 7, which may be confusing. Adjectives and adverbs are compared, and the former are inflected according to case, gender, and number. In view of the fact that adjectives are often used for nouns, the two are termed substantives. Although Classical Latin has demonstrative pronouns indicating different degrees of proximity ("this one here", "that one there"), it does not have articles. Later Romance language articles developed from the demonstrative pronouns; e.g., le and la (French) from ille and illa, su and sa (Sardinian) from ipse and ipsa.
+
+
+Legacy
+Latin culture has been passed down through a number of broad genres.
+
+
+Inscriptions
+Most inscriptions have been published in an internationally agreed-upon, monumental, multi-volume series termed the Corpus Inscriptionum Latinarum (CIL). Authors and publishers vary but the format is approximately the same: volumes detailing inscriptions with a critical apparatus stating the provenance and relevant information. The reading and interpretation of these inscriptions is the subject matter of the field of epigraphy. There are approximately 270,000 known inscriptions.
+
+
+Literature
+The works of several hundred ancient authors who wrote in Latin have survived in whole or in part, in substantial works or in fragments to be analyzed in philology. They are in part the subject matter of the field of Classics. Their works were published in manuscript form before the invention of printing and now exist in carefully annotated printed editions such as the Loeb Classical Library, published by Harvard University Press or the Oxford Classical Texts, published by Oxford University Press.
+Latin translations of modern literature such as Treasure Island, Robinson Crusoe, Paddington Bear, Winnie the Pooh, Tintin, Asterix, Harry Potter, Walter the Farting Dog, Le Petit Prince, Max und Moritz, How the Grinch Stole Christmas, and The Cat in the Hat and a book of fairy tales, "fabulae mirabiles," are intended to garner popular interest in the language. Additional resources include phrasebooks and resources for rendering everyday phrases and concepts into Latin, such as Meissner's Latin Phrasebook.
+
+
+Linguistics
+Latin has had a significant influence in the formation of English at all stages of its insular development. In the medieval period, much borrowing from Latin occurred through ecclesiastical usage established by Saint Augustine of Canterbury in the 6th century, or indirectly after the Norman Conquest through the Anglo-Norman language. From the 16th to the 18th centuries, English writers cobbled together huge numbers of new words from Latin and Greek words. These were dubbed inkhorn terms, as if they had spilled from a pot of ink. Many of these words were used once by the author and then forgotten, but some useful ones survived, such as imbibe and extrapolate. Many of the most common polysyllabic English words are of Latin origin, through the medium of Old French.
+Due to the influence of Roman governance and Roman technology on the less developed nations under Roman dominion, those nations adopted Latin phraseology in some specialized areas, such as science, technology, medicine and law. For example, the Linnaean system of plant and animal classification was heavily influenced by Historia Naturalis, an encyclopedia of people, places, plants, animals and things published by Pliny the Elder. Roman medicine, recorded in the works of such physicians as Galen, established that today's medical terminology would be primarily derived from Latin and Greek words, the Greek being filtered through the Latin. Roman engineering had the same effect on scientific terminology as a whole. Latin law principles have survived partly in a long list of legal Latin terms.
+Many international auxiliary languages have been heavily influenced by Latin. Interlingua, which lays claim to a sizeable following, is sometimes considered a simplified, modern version of the language. Latino sine Flexione, popular in the early 20th century, is Latin with its inflections stripped away, among other grammatical changes.
+
+
+Education
+
+Throughout European history, an education in the Classics was considered a must for those who wished to join literate circles. Instruction in Latin is an essential aspect of Classics. In today's world, a large number of Latin students in America learn from Wheelock's Latin: The Classic Introductory Latin Course, Based on Ancient Authors. This book, first published in 1956, was written by Frederic M. Wheelock, who received a PhD from Harvard University. Wheelock's Latin has become the standard text for many American introductory Latin courses.
+The Living Latin movement attempts to teach Latin in the same way that living languages are taught, i.e., as a means of both spoken and written communication. It is available at the Vatican, and at some institutions in the U.S., such as the University of Kentucky and Iowa State University. The British Cambridge University Press is a major supplier of Latin textbooks for all levels, such as the Cambridge Latin Course series. It has also published a subseries of children's texts in Latin by Bell & Forte, which recount the adventures of a mouse called Minimus.
+In the United Kingdom, the Classical Association encourages the study of antiquity through various means, such as publications and grants. In the United States and Canada, the American Classical League supports every effort to further the study of classics. Its subsidiaries include: the National Junior Classical League (with more than 50,000 members), which encourages high school students to pursue the study of Latin, and the National Senior Classical League, which encourages students to continue their study of the classics into college. The league also sponsors the National Latin Exam. Classicist Mary Beard wrote in The Times Literary Supplement in 2006 that the reason for learning Latin is because of what was written in it.
+Latin is taught as a mandatory subject in gymnasia and other so-called classical high schools, located chiefly in Europe. Latin grammar has been taught in most Italian schools since the 18th century: for example, in the Liceo classico and Liceo scientifico, Latin is still one of the primary subjects. In the United States, although once offered nearly universally, Latin is limited to elective status in a steadily declining number of grade schools, both public and private. The ordinary student can no longer count on being able to take Latin, but there are extracurricular means. The College Board examinations, which serve as an educational tool for the admission of students into colleges, still feature one Latin examination on a voluntary basis: Advanced Placement Latin: Vergil.
+
+
+History of Latin
+
+A number of historical phases of the language have been recognized, each distinguished by subtle differences in vocabulary, usage, spelling, morphology and syntax. There are no hard and fast rules of classification; different scholars emphasize different features. As a result, the list has variants, as well as alternative names. In addition to the historical phases, Ecclesiastical Latin refers to the styles used by the writers of the Roman Catholic Church, as well as by Protestant scholars, from Late Antiquity onward.
+The generally recognized main phases under their most frequent names are introduced below.
+
+
+Archaic Latin
+
+The earliest known is Old Latin, which was spoken from the Roman Kingdom to the middle Republican period, and is attested both in inscriptions and in some of the earliest extant literary works, such as the comedies of Plautus and Terence. During this period, the Latin alphabet was devised from the Etruscan alphabet. The writing style later changed from an initial right-to-left or boustrophedon to a left-to-right script.
+
+
+Classical Latin
+
+During the late republic and into the first years of the empire, a new Classical Latin arose, a conscious creation of the orators, poets, historians and other literate men, who wrote the great works of classical literature, which were taught in grammar and rhetoric schools. Today's instructional grammars trace their roots to these schools, which served as a sort of informal language academy dedicated to maintaining and perpetuating educated speech.
+
+
+Vulgar Latin
+
+Philological analysis of Archaic Latin works, such as Plautus', which contain snippets of everyday speech, indicates that a spoken language, Vulgar Latin (sermo vulgi ("the speech of the masses") by Cicero), existed at the same time as the literate Classical Latin. This informal language was rarely written, so philologists have been left with only individual words and phrases cited by Classical authors, as well as those found as graffiti.
+As vernacular Latin was free to develop on its own, there is no reason to suppose that the speech was uniform either diachronically or geographically. On the contrary, Romanized European populations developed their own dialects of the language. The Decline of the Roman Empire meant a deterioration in educational standards that brought about Late Latin, a post-classical stage of the language seen in Christian writings of the time. This language was more in line with the everyday speech not only because of a decline in education, but also because of a desire to spread the word to the masses.
+Despite dialect variation (which is found in any sufficiently widespread language) the languages of Spain, France, Portugal and Italy retained a remarkable unity in phonological forms and developments, bolstered by the stabilizing influence of their common Christian culture. It was not until the Moorish conquest of Spain in 711 cut off communications between the major Romance regions that the languages began to diverge seriously.
+One way to determine whether a Romance language feature was in Vulgar Latin is to compare it with its parallel in Classical Latin. If it was not preferred in classical Latin, then it most likely came from the invisible contemporaneous vulgar Latin. For example, Romance "horse" (cavallo/cheval/caballo/cavalo) came from Latin caballus. However, classical Latin used equus. Caballus therefore was most likely the spoken form.
+Vulgar Latin began to diverge into distinct languages by the 9th century at the latest, when the earliest extant Romance writings begin to appear. They were, throughout the Dark Ages, confined to everyday speech, as, subsequent to Late Latin, Medieval Latin was used for writing.
+
+
+Medieval Latin
+
+The term Medieval Latin refers to the written Latin in use during that portion of the post-classical period when no corresponding Latin vernacular existed. The spoken language had developed into the various incipient Romance languages; however, in the educated and official world Latin continued without its natural spoken base. Moreover, this Latin spread into lands that had never spoken Latin, such as the Germanic and Slavic nations. It became useful for international communication between the member states of the Holy Roman Empire and its allies.
+Without the institutions of the Roman empire that had supported its uniformity, medieval Latin lost its linguistic cohesion: for example, in classical Latin sum and eram are used as auxiliary verbs in the perfect and pluperfect passive, which are compound tenses. Medieval Latin might use fui and fueram instead. Furthermore the meanings of many words have been changed and new vocabularies have been introduced from the vernacular. Identifiable individual styles of classically incorrect Latin prevail.
+
+
+Renaissance Latin
+
+The Renaissance briefly reinforced the position of Latin as a spoken language, through its adoption by the Renaissance Humanists. Often led by members of the clergy, they were shocked by the accelerated dismantling of the vestiges of the classical world and the rapid loss of its literature. They strove to preserve what they could. It was they who introduced the practice of producing revised editions of the literary works that remained by comparing surviving manuscripts, and they who attempted to restore Latin to what it had been. They corrected medieval Latin out of existence no later than the 15th century and replaced it with more formally correct versions supported by the scholars of the rising universities, who attempted, through scholarship, to discover what the classical language had been.
+
+
+Early modern Latin
+During the Early Modern Age Latin still was the most important language of culture in Europe. Therefore, until the end of the 18th century the majority of books were written in Latin.
+
+
+Modern Latin
+
+The largest organization that retains Latin in official and quasi-official contexts is the Catholic Church. Latin remains the language of the Roman Rite; the Tridentine Mass is celebrated in Latin, and although the Mass of Paul VI is usually celebrated in the local vernacular language, it can be and often is said in Latin, in part or whole, especially at multilingual gatherings. Latin is the official language of the Holy See, the primary language of its public journal, the Acta Apostolicae Sedis, and the working language of the Roman Rota. The Vatican City is also home to the world's only ATM that gives instructions in Latin.
+In the Anglican Church, after the publication of the Anglican Book of Common Prayer of 1559, a 1560 Latin edition was published for use at universities such as Oxford and the leading public schools, where the liturgy was still permitted to be conducted in Latin and there have been several Latin translations since. Most recently a Latin edition of the 1979 USA Anglican Book of Common Prayer has appeared.
+Some films of ancient settings, such as Sebastiane and The Passion of the Christ, have been made with dialogue in Latin for the sake of realism. Occasionally, Latin dialogue is used because of its association with religion or philosophy, in such film/TV series as The Exorcist and Lost ("Jughead"). Subtitles are usually shown for the benefit of those who do not understand Latin. There are also songs written with Latin lyrics. The libretto for the opera-oratorio Oedipus rex (opera) by Igor Stravinsky is in Latin.
+Switzerland adopts the country's Latin short name "Helvetia" on coins and stamps, since there is no room to use all of the nation's four official languages. For a similar reason it adopted the international vehicle and internet code CH, which stands for Confoederatio Helvetica, the country's full Latin name.
+
+Many organizations today have Latin mottos, such as "Semper paratus" (always ready), the motto of the United States Coast Guard, and "Semper fidelis" (always faithful), the motto of the United States Marine Corps. Several of the states of the United States also have Latin mottos, such as "Montani semper liberi" (Mountaineers are always free), the state motto of West Virginia; "Sic semper tyrannis" (Thus always for tyrants), that of Virginia; "Esse quam videri" (To be rather than to seem), that of North Carolina; "Si quaeris peninsulam amoenam, circumspice" ("If you seek a pleasant peninsula, look about you") that of Michigan. Another Latin motto is "Per ardua ad astra" (Through adversity/struggle to the stars), the motto of the RAF. Some schools adopt Latin mottos such as "Disce aut discede" of the Royal College, Colombo.
+Occasionally, some media outlets broadcast in Latin, which is targeted at enthusiasts. Notable examples include Radio Bremen in Germany, YLE radio in Finland and Vatican Radio & Television, all of which broadcast news segments and other material in Latin.
+There are many websites and forums maintained in Latin by enthusiasts. The Latin Wikipedia has more than 70,000 articles written in Latin.
+Latin is still taught in many high schools in Europe and the Americas as complementary teaching. It is still compulsory in few schools, like the Boston Latin School, Boston Latin Academy and the Italian Liceo classico and Liceo scientifico.
+In the pontifical universities postgraduate courses of Canon law are taught in Latin and papers should be written in the same language.
+
+
+Phonology
+
+No inherited verbal knowledge of the ancient pronunciation of Latin exists. It must be reconstructed. Among the data used for reconstruction listed by Allen are explicit statements by ancient authors, especially grammarians, about the pronunciation of a word, puns, ancient etymologies, Latin words stated in other languages, and so on.
+As with any language, pronunciation varied according to historical period. Standard practice in Latin education is to teach the pronunciation of classical Latin first. Most Latinists know the opening words of De Bello Gallico, Gallia est omnis divisa in partes tres ... and know that divisa is nowadays most often pronounced as "diwisa". It makes little difference whether the refrain of Oh come all ye faithful is sung as "venite, venite" or "wenite, wenite", although the first is more appropriate to the period. Period differences are generally taught with the works of their authors; however, the classical pronunciation is always generally acceptable.[original research?]
+
+
+Consonants
+The main consonant phonemes of classical Latin are shown in the following table. The phonemes given by no means exhaust the number of possible phonemes. For example, distinctions might be made between word-initial and word-final positions, intervocalic, post-consonantal, and so on, which are considerations of linguistic environment. Also, geminate consonants may not be the same phonemes as single ones.
+The period graphemes representing these phonemes are only a partial match to today's English alphabet, which, except for the capital letters, dates to the Middle Ages. Latin texts are nevertheless printed in it. The inscription from the Colosseum shown at the top of the article is a good example of the appearance of native Roman graphemes. Some notes concerning the mapping of Latin phonemes to English graphemes are given below.
+Long consonants are represented by doubled spelling: puella = /pʊˈɛlːa/ ("girl"; similar to Italian nella), littera = /ˈlɪtːɛra/ ("letter", "character"; as in Italian petto), accidere = /akːɪdɛrɛ/ ("to happen"; stress on the second syllable; as in Italian ecco), addere = /ˈadːɛrɛ/ ("to add"), pessime = /ˈpɛsːimeː/ ("very/most badly") and the like.
+It is also notable that consonants at the end of syllables close these syllables clearly; that means the latter are pronounced longer: e.g. amare = /aˈmaːrɛ/ ("to love") has the quantitative structure short-long-short, whereas armare = /arˈmaːrɛ/ ("to arm") shows long-long-short. This feature of classical Latin is crucial to the understanding and retracing of Latin poetical rhythms of classical and ensuing times, which are mainly based on syllable lengths, less on the word stresses.
+
+
+Vowels
+Vowels:
+⟨a⟩ = /a/ when short and /aː/ when long ⟨á⟩
+⟨e⟩ = /ɛ/ (as in pet) when short and /eː/ (somewhat as in English they) when long ⟨é⟩
+⟨i⟩ = /ɪ/ (as in pin) when short and /iː/ (as in machine) when long ⟨ꟾ⟩
+⟨o⟩ = /ɔ/ (as in British English law) when short and /oː/ (somewhat as in holy) when long ⟨ó⟩
+⟨u⟩ = /ʊ/ (as in put) when short and /uː/ (as in true) when long ⟨ú⟩. Also ⟨v⟩.
+In inscriptions, and in upper case in handwriting, the letter u, whether as a consonant or as a vowel, was invariably written as V.
+Classical Latin distinguished between long and short vowels, and the use of the apex, which indicates long vowels, was quite widespread during classical and postclassical times. In modern texts, long vowels are often indicated by a macron ⟨ā, ē, ī, ō, ū⟩, and short vowels are sometimes indicated by a breve ⟨ă, ĕ, ĭ, ŏ, ŭ⟩. The vowel-length distinction began to fade by Late Latin.
+A vowel followed by an ⟨m⟩ or ⟨n⟩ (maintained later by some Romance languages), either at the end of a word (⟨m⟩ only) or before another consonant, is nasal, as in monstrum /mõːstrũː/, and in many cases the consonant is not pronounced, as in French and Portuguese.
+
+
+Orthography
+
+Latin was written in the Latin alphabet, derived from the Old Italic alphabet, which was in turn drawn from the Greek and ultimately the Phoenician alphabet. This alphabet has continued to be used over the centuries as the script for the Romance, Celtic, Germanic, Baltic, Finnic, and many Slavic languages (Polish, Slovak, Slovene, Croatian and Czech), as well as for many other languages, such as Indonesian, Vietnamese (previously used Chinese characters), and the Niger–Congo languages.
+The number of letters in the Latin alphabet has varied. When it was first derived from the Etruscan alphabet, it contained only 21. Later, G was added to represent /ɡ/, which had previously been spelled C; while Z ceased to be included in the alphabet due to non-use, as the language had no voiced alveolar fricative at the time. The letters Y and Z were later added to represent the Greek letters upsilon and zeta respectively in Greek loanwords.W was created in the 11th century from VV. It represented /w/ in Germanic languages, not in Latin, which still uses V for the purpose. J was distinguished from the original I only during the late Middle Ages, as was the letter U from V. Although some Latin dictionaries use J it is for the most part not used for Latin text as it was not used in classical times, although many other languages use it.
+Classical Latin did not contain sentence punctuation, letter case, or interword spacing, though apices were used to distinguish length in vowels and the interpunct was used at times to separate words. So, a sentence originally written:
+LV́GÉTEÓVENERÉSCVPIDINÉSQVE
+or with interpunct as
+LV́GÉTE·Ó·VENERÉS·CVPIDINÉSQVE
+would be rendered in a modern edition as
+Lugete, O Veneres Cupidinesque
+or with macrons
+Lūgēte, Ō Venerēs Cupīdinēsque.
+and translated as
+Mourn, O Venuses and Cupids.
+
+The Roman cursive script is commonly found on the many wax tablets excavated at sites such as forts, an especially extensive set having been discovered at Vindolanda on Hadrian's Wall in Britain. Curiously enough, most of the Vindolanda tablets show spaces between words, though spaces were avoided in monumental inscriptions from that era.
+
+
+Grammar
+
+Latin is a synthetic, fusional language, in the terminology of linguistic typology. In more traditional terminology, it is an inflected language, although the typologists are apt to say "inflecting". Thus words include an objective semantic element, and also markers specifying the grammatical use of the word. This fusion of root meaning and markers produces very compact sentence elements. For example, amo, "I love," is produced from a semantic element, ama-, "love," to which -o, a first person singular marker, is suffixed. English requires two words to express the same meaning.
+The grammatical function can be changed by changing the markers: the word is "inflected" to express different grammatical functions. The semantic element does not change. Inflection uses affixing and infixing. Affixing is prefixing and suffixing. Latin inflections are never prefixed. For example, amabit, "he or she will love", is formed from the same stem, ama-, to which a future tense marker, -bi-, is suffixed, and a third person singular marker, -t, is suffixed. There is an inherent ambiguity: -t may denote more than one grammatical category, in this case either masculine, feminine, or neuter gender. A major task in understanding Latin phrases and clauses is to clarify such ambiguities by an analysis of context. All natural languages contain ambiguities of one sort or another.
+The inflections express gender, number, and case in adjectives, nouns, and pronouns—a process called declension. Markers are also attached to fixed stems of verbs, to denote person, number, tense, voice, mood, and aspect—a process called conjugation. Some words are uninflected, and do not undergo either process.
+
+
+Nouns
+
+There are seven Latin noun cases, which also apply to adjectives and pronouns. These mark a noun's syntactic role in the sentence, so word order is not as important in Latin as it is in some other languages, such as English. Words can typically be moved around in a sentence without significantly altering its meaning, although the emphasis may have been altered. The cases are:
+Nominative – used when the noun is the subject or a predicate nominative. The thing or person acting; e.g., the girl ran: puella cucurrit, or cucurrit puella
+Genitive – used when the noun is the possessor of or connected with an object (e.g., "the horse of the man", or "the man's horse"—in both of these instances, the word man would be in the genitive case when translated into Latin). Also indicates the partitive, in which the material is quantified (e.g., "a group of people"; "a number of gifts"—people and gifts would be in the genitive case). Some nouns are genitive with special verbs and adjectives too (e.g., The cup is full of wine. Poculum plenum vini est. The master of the slave had beaten him. Dominus servi eum verberaverat.)
+Dative – memorised as "to or for": used when the noun is the indirect object of the sentence, with special verbs, with certain prepositions, and if used as agent, reference, or even possessor. (e.g., The merchant hands over the stola to the woman. Mercator feminae stolam tradit.)
+Accusative – used when the noun is the direct object of the sentence/phrase, with certain prepositions, or as the subject of an infinitive. The thing or person having something done to them. (e.g., The slave woman carries the wine. Ancilla vinum portat.) In addition, there are certain constructions where the accusative can be used for the subject of a clause, one being the indirect statement.
+Vocative – used when the noun is used in a direct address. The vocative form of a noun is the same as the nominative except for second-declension nouns ending in -us. The -us becomes an -e or if it ends in -ius (such as filius) then the ending is just -i (fili) (as distinct from the nominative plural (filii)). (e.g., "Master!" shouted the slave. "Domine!" clamavit servus.)
+Ablative – memorised as "by, with, or from": used when the noun demonstrates separation or movement from a source, cause, agent, or instrument, or when the noun is used as the object of certain prepositions; adverbial. (e.g., You walked with the boy. cum puero ambulavisti.)
+Locative, used to indicate a location (corresponding to the English "in" or "at"). This is far less common than the other six cases of Latin nouns and usually applies to cities, small towns, and islands smaller than the island of Rhodes, along with a few common nouns. In the first and second declension singular, its form coincides with the genitive (Roma becomes Romae, "in Rome"). In the plural, and in the other declensions, it coincides with the ablative (Athenae becomes Athenis, "at Athens"). In the case of the fourth declension word domus, the locative form, domi ("at home") differs from the standard form of all the other cases.
+Latin lacks definite and indefinite articles; thus puer currit can mean either "the boy is running" or "a boy is running".
+
+
+Verbs
+
+A regular verb in Latin belongs to one of four main conjugations. A conjugation is "a class of verbs with similar inflected forms." The conjugations are identified by the last letter of the verb stem, which appears in the active infinitive form if there is one, or the passive infinitive if there is not. The infinitive of the first conjugation ends in -ā-re or -ā-ri (active and passive respectively); e.g., amāre, "to love," hortārī, "to exhort"; of the second conjugation by -ē-re or -ē-rī; e.g., monēre, "to warn", verērī, "to fear;" of the third conjugation by -ere, -ī; e.g., dūcere, "to lead," ūtī, "to use"; of the fourth by -ī-re, -ī-rī; e.g., audīre, "to hear," experīrī, "to attempt". Irregular verbs may not follow these types, or may be marked in a different way. The "endings" presented above are not the suffixed infinitive markers. The first letter in each case is the last of the stem, because of which the conjugations are also called the a-conjugation, e-conjugation and i-conjugation. The fused infinitive ending is -re or -rī. Third-conjugation stems end in a consonant: the consonant conjugation. Further, there is a subset of the 3rd conjugation, the i-stems, which behave somewhat like the 4th conjugation, as they are both i-stems, one short and the other long. These stem categories descend from PIE, and can therefore be compared to similar conjugations in other IE languages.
+There are six general tenses in Latin (present, imperfect, future, perfect, pluperfect, and future perfect), three grammatical moods (indicative, imperative and subjunctive, in addition to the infinitive, participle, gerund, gerundive and supine), three persons (first, second, and third), two numbers (singular and plural), two voices (active and passive), and three aspects (perfective, imperfective, and stative). Verbs are described by four principal parts:
+The first principal part is the first person (or third person for impersonal verbs) singular, present tense, indicative mood, active voice form of the verb (or passive voice for verbs lacking an active voice).
+The second principal part is the present infinitive active (or passive for verbs lacking an active) form.
+The third principal part is the first person (or third person for impersonal verbs) singular, perfect indicative active (or passive when there is no active) form.
+The fourth principal part is the supine form, or alternatively, the nominative singular, perfect passive participle form of the verb. The fourth principal part can show either one gender of the participle, or all three genders (-us for masculine, -a for feminine, and -um for neuter). It can also be the future participle when the verb cannot be made passive. Most modern Latin dictionaries, if only showing one gender, tend to show the masculine; however, many older dictionaries will instead show the neuter, as this coincides with the supine. The fourth principal part is sometimes omitted for intransitive verbs, although strictly in Latin these can be made passive if used impersonally, and the supine exists for these verbs.
+There are six tenses in the Latin language: present, future, imperfect, perfect, future perfect, and pluperfect. Each tense has a set of endings corresponding to the person and number referred to. This means that subject pronouns (e.g. ego "I") tend to be included only for emphasis or contrast. The following table lists the endings for the active voice and indicative mood of each of these tenses.
+
+
+Vocabulary
+As Latin is an Italic language, most of its vocabulary is likewise Italic, deriving ultimately from PIE. However, because of close cultural interaction, the Romans not only adapted the Etruscan alphabet to form the Latin alphabet, but also borrowed some Etruscan words into their language, including persona (mask) and histrio (actor). Latin also included vocabulary borrowed from Oscan, another Italic language.
+After the Fall of Tarentum (272 BC), the Romans began hellenizing, or adopting features of Greek culture, including the borrowing of Greek words, such as camera (vaulted roof), sumbolum (symbol), and balineum (bath). This hellenization led to the addition of "Y" and "Z" to the alphabet to represent Greek sounds. Subsequently the Romans transplanted Greek art, medicine, science and philosophy to Italy, paying almost any price to entice Greek skilled and educated persons to Rome, and sending their youth to be educated in Greece. Thus, many Latin scientific and philosophical words were Greek loanwords or had their meanings expanded by association with Greek words, as ars (craft) and τέχνη.
+Because of the Roman Empire’s expansion and subsequent trade with outlying European tribes, the Romans borrowed some northern and central European words, such as beber (beaver), of Germanic origin, and bracae (breeches), of Celtic origin. The specific dialects of Latin across Latin-speaking regions of the former Roman Empire after its fall were influenced by languages specific to the regions. These spoken Latins evolved into particular Romance languages.
+During and after the adoption of Christianity into Roman society, Christian vocabulary became a part of the language, formed either from Greek or Hebrew borrowings, or as Latin neologisms. Continuing into the Middle Ages, Latin incorporated many more words from surrounding languages, including Old English and other Germanic languages.
+Over the ages, Latin-speaking populations produced new adjectives, nouns, and verbs by affixing or compounding meaningful segments. For example, the compound adjective, omnipotens, "all-powerful," was produced from the adjectives omnis, "all", and potens, "powerful", by dropping the final s of omnis and concatenating. Often the concatenation changed the part of speech; i.e., nouns were produced from verb segments or verbs from nouns and adjectives.
+
+
+See also
+
+
+Notes
+
+
+References
+
+
+External links
+
+
+Language tools
+
+
+Courses
+
+Beginners' Latin on http://www.nationalarchives.gov.uk/
+
+
+Grammar and study
+
+
+Phonetics
