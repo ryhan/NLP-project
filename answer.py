@@ -29,3 +29,5 @@ article_content = read_file(path_to_article)
 question_file = open(path_to_questions)
 for question in question_file:
   answer(question.strip())
+
+question_file.close()
