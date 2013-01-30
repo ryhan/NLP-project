@@ -15,7 +15,7 @@ def read_file(path):
   return content
 
 def answer(question):
-  print("The answer to '" + str(question) + "'' is 42.")
+  print("The answer to '" + str(question) + "' is 42.")
 
 
 # Main
