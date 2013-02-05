@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # answer.py
 # 11-411 NLP Spring 2013, Group 6
 # (Stub) Authored by Ryhan Hassan | rhassan@andrew.cmu.edu
