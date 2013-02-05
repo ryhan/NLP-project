@@ -1,0 +1,91 @@
+team_id qns_id  article_title path  qns_difficulty_by_questioner  qns_text  is_disfluent? is_bad_qns? answer  qns_difficulty_by_answerer
+Ugrad 06  1 John_Terry  set1/a10  hard  How did Terry prove himself as Chelsea club captain?  False False He won the Premier League title hard
+Ugrad 06  1 John_Terry  set1/a10  hard  How did Terry prove himself as Chelsea club captain?  True  False   
+Ugrad 06  2 John_Terry  set1/a10  hard  Is Terry still the highest-paid player in the Premier League? False False No  hard
+Ugrad 06  2 John_Terry  set1/a10  hard  Is Terry still the highest-paid player in the Premier League? False False No  medium
+Ugrad 06  3 John_Terry  set1/a10  hard  Where did the incident occur that caused Terry to be charged with assault and affray? False False A West London nightclub hard
+Ugrad 06  3 John_Terry  set1/a10  hard  Where did the incident occur that caused Terry to be charged with assault and affray? False False West London nightclub medium
+Ugrad 06  4 John_Terry  set1/a10  medium  How many children does Terry have?  False False Two hard
+Ugrad 06  4 John_Terry  set1/a10  medium  How many children does Terry have?  False False Two hard
+Ugrad 06  5 John_Terry  set1/a10  medium  What football position does Terry play? False False Centre Back Position  medium
+Ugrad 06  5 John_Terry  set1/a10  medium  What football position does Terry play? False False centre-back medium
+Ugrad 06  6 John_Terry  set1/a10  medium  When was terry captain of the England national football team? False False From August 2006 to February 2010 medium
+Ugrad 06  6 John_Terry  set1/a10  medium  When was terry captain of the England national football team? False False August 2006 to February 2010, and again from March 2011 to February 2012  medium
+Ugrad 06  7 John_Terry  set1/a10  easy  Was John Terry captain of the England national football team? False False Yes easy
+Ugrad 06  7 John_Terry  set1/a10  easy  Was John Terry captain of the England national football team? False False Yes easy
+Ugrad 06  8 John_Terry  set1/a10  easy  Did Terry have back problems in 2006-2007?  False False Yes medium
+Ugrad 06  8 John_Terry  set1/a10  easy  Did Terry have back problems in 2006-2007?  False False Yes easy
+Ugrad 06  9 John_Terry  set1/a10  easy  Was Terry convicted of the allegations of racist abuse? False False No  too hard
+Ugrad 06  9 John_Terry  set1/a10  easy  Was Terry convicted of the allegations of racist abuse? False False No  easy
+Ugrad 06  10  The_Artist_(film) set4/a1 hard  What two events caused the film Valentin produced to fail?  False False Peppy's new sound film and the 1929 Stock Market Crash  too hard
+Ugrad 06  10  The_Artist_(film) set4/a1 hard  What two events caused the film Valentin produced to fail?  False False  Peppy's film and the 1929 Stock Market Crash.  hard
+Ugrad 06  11  The_Artist_(film) set4/a1 hard  What was the final incident that pushed Valentin to attempt suicide?  False False He learns that it had been Peppy who had purchased all his auctioned effects  hard
+Ugrad 06  11  The_Artist_(film) set4/a1 hard  What was the final incident that pushed Valentin to attempt suicide?  False False Peppy had purchased all his auctioned effects hard
+Ugrad 06  12  The_Artist_(film) set4/a1 hard  Who were the two main characters in The Artist? False False George Valentin and Peppy Miller  too hard
+Ugrad 06  12  The_Artist_(film) set4/a1 hard  Who were the two main characters in The Artist? False False George Valentin and Peppy Miller  hard
+Ugrad 06  13  The_Artist_(film) set4/a1 medium  How many Academy Awards did The Artist win? False False Five  medium
+Ugrad 06  13  The_Artist_(film) set4/a1 medium  How many Academy Awards did The Artist win? False False five  medium
+Ugrad 06  14  The_Artist_(film) set4/a1 medium  Who directed The Artist?  False False Michel Hazanavicius medium
+Ugrad 06  14  The_Artist_(film) set4/a1 medium  Who directed The Artist?  False False Michel Hazanavicius   medium
+Ugrad 06  15  The_Artist_(film) set4/a1 medium  Which company bought the distribution rights for the United States and Australia? False False The Weinstein Company medium
+Ugrad 06  15  The_Artist_(film) set4/a1 medium  Which company bought the distribution rights for the United States and Australia? False False The Weinstein Company   medium
+Ugrad 06  16  The_Artist_(film) set4/a1 easy  Is The Artist a film? False False Yes easy
+Ugrad 06  16  The_Artist_(film) set4/a1 easy  Is The Artist a film? False False Yes easy
+Ugrad 06  17  The_Artist_(film) set4/a1 easy  Did Dujardin win the Best Actor Award at Cannes for The Artist? False False Yes easy
+Ugrad 06  17  The_Artist_(film) set4/a1 easy  Did Dujardin win the Best Actor Award at Cannes for The Artist? False False Yes easy
+Ugrad 06  18  The_Artist_(film) set4/a1 easy  Was Gerard Depardieu a cast member of The Artist? False False No  easy
+Ugrad 06  18  The_Artist_(film) set4/a1 easy  Was Gerard Depardieu a cast member of The Artist? False False No  easy
+Ugrad 06  19  English_language  set3/a1 hard  What is the best known work of Middle English?  False False The Canterbury Tales  hard
+Ugrad 06  19  English_language  set3/a1 hard  What is the best known work of Middle English?  False False The Canterbury Tales  medium
+Ugrad 06  20  English_language  set3/a1 hard  Is English related to Dutch?  False False Yes hard
+Ugrad 06  20  English_language  set3/a1 hard  Is English related to Dutch?  False False Yes medium
+Ugrad 06  21  English_language  set3/a1 hard  How is English written? False False Latin script  hard
+Ugrad 06  21  English_language  set3/a1 hard  How is English written? False True  Formal written english. medium
+Ugrad 06  22  English_language  set3/a1 medium  Where did English originate?  False False English originated from the fusion of Old English dialects  hard
+Ugrad 06  22  English_language  set3/a1 medium  Where did English originate?  False False various parts of what are now the Netherlands, northwest Germany, and Denmark hard
+Ugrad 06  23  English_language  set3/a1 medium  Where was English first spoken? False False early medieval England  medium
+Ugrad 06  23  English_language  set3/a1 medium  Where was English first spoken? False False early medieval England  medium
+Ugrad 06  24  English_language  set3/a1 medium  How many people speak English as their first language?  False False 375 million people  medium
+Ugrad 06  24  English_language  set3/a1 medium  How many people speak English as their first language?  False False  375 million people medium
+Ugrad 06  25  English_language  set3/a1 easy  Is English the primary language of Australia? False False Yes hard
+Ugrad 06  25  English_language  set3/a1 easy  Is English the primary language of Australia? False False Yes easy
+Ugrad 06  26  English_language  set3/a1 easy  Is English one of the official languages of the United Nations? False False Yes medium
+Ugrad 06  26  English_language  set3/a1 easy  Is English one of the official languages of the United Nations? False False Yes easy
+Ugrad 06  27  English_language  set3/a1 easy  Is English the most widely used language in the world?  False False Yes easy
+Ugrad 06  27  English_language  set3/a1 easy  Is English the most widely used language in the world?  False False Yes easy
+Ugrad 06  28  Aries_(constellation) set2/a4 hard  Why is unusual about the NGC 821 galaxy?  False True    
+Ugrad 06  28  Aries_(constellation) set2/a4 hard  Why is unusual about the NGC 821 galaxy?  False True  It has hints of an early spiral structure hard
+Ugrad 06  29  Aries_(constellation) set2/a4 hard  What are the stars Alpha, Beta, and Gamma Arietis commonly used for?  False False navigation  medium
+Ugrad 06  29  Aries_(constellation) set2/a4 hard  What are the stars Alpha, Beta, and Gamma Arietis commonly used for?  False False Navigation  hard
+Ugrad 06  30  Aries_(constellation) set2/a4 hard  In traditional Chinese astronomy, what constellation was formed from the brightest stars in Aries?  False False Lou hard
+Ugrad 06  30  Aries_(constellation) set2/a4 hard  In traditional Chinese astronomy, what constellation was formed from the brightest stars in Aries?  False False Lou hard
+Ugrad 06  31  Aries_(constellation) set2/a4 medium  What is the brightest star in Aries?  False False Alpha, Beta, and Gamma Arietis  medium
+Ugrad 06  31  Aries_(constellation) set2/a4 medium  What is the brightest star in Aries?  False False Hamal medium
+Ugrad 06  32  Aries_(constellation) set2/a4 medium  What star in Aries is closest to Earth? False False Teegarden's Star  medium
+Ugrad 06  32  Aries_(constellation) set2/a4 medium  What star in Aries is closest to Earth? False False Teegarden's Star  medium
+Ugrad 06  33  Aries_(constellation) set2/a4 medium  What was Aries associated with in ancient Egyptian astronomy? False False the god Amon-Ra medium
+Ugrad 06  33  Aries_(constellation) set2/a4 medium  What was Aries associated with in ancient Egyptian astronomy? False False The god Amon-Ra medium
+Ugrad 06  34  Aries_(constellation) set2/a4 easy  Are most stars in Aries invisible to the naked eye? False False Yes hard
+Ugrad 06  34  Aries_(constellation) set2/a4 easy  Are most stars in Aries invisible to the naked eye? True  False No  too hard
+Ugrad 06  35  Aries_(constellation) set2/a4 easy  Is Aries a dim constellation? False False Yes easy
+Ugrad 06  35  Aries_(constellation) set2/a4 easy  Is Aries a dim constellation? False False Yes easy
+Ugrad 06  36  Aries_(constellation) set2/a4 easy  Is Aries an official constellation? False False Yes easy
+Ugrad 06  36  Aries_(constellation) set2/a4 easy  Is Aries an official constellation? False False Yes easy
+Ugrad 06  37  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 hard  Who starts to fall in love with Aragorn?  False False Eowyn hard
+Ugrad 06  37  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 hard  Who starts to fall in love with Aragorn?  False False Eowyn hard
+Ugrad 06  38  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 hard  Who is shot by Legolas? False False Grima Wormtongue  hard
+Ugrad 06  38  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 hard  Who is shot by Legolas? False False Grima Wormtongue  hard
+Ugrad 06  39  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 hard  What film tied for largest number of awards won with Ben-Hur and Titanic? False False The Lord of the Rings: The Return of the King hard
+Ugrad 06  39  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 hard  What film tied for largest number of awards won with Ben-Hur and Titanic? False False The Lord of the Rings: The Return of the King hard
+Ugrad 06  40  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 medium  When was The Return of the King released? False False 17 December 2003  medium
+Ugrad 06  40  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 medium  When was The Return of the King released? False False 2003  medium
+Ugrad 06  41  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 medium  How many Academy Awards did the film win? False False eleven  hard
+Ugrad 06  41  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 medium  How many Academy Awards did the film win? False False Eleven  medium
+Ugrad 06  42  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 medium  Who plays Frodo Baggins?  False False Elijah Wood medium
+Ugrad 06  42  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 medium  Who plays Frodo Baggins?  False False Elijah Wood medium
+Ugrad 06  43  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 easy  Is �omer the uncle of �owyn?  False False No  hard
+Ugrad 06  43  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 easy  Is �omer the uncle of �owyn?  False False No  medium
+Ugrad 06  44  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 easy  Did the film receive critical acclaim?  False False Yes easy
+Ugrad 06  44  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 easy  Did the film receive critical acclaim?  False False Yes easy
+Ugrad 06  45  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 easy  Do Frodo, Sam and Gollum travel to Minas Morgul?  False False Yes easy
+Ugrad 06  45  The_Lord_of_the_Rings:_The_Return_of_the  set4/a5 easy  Do Frodo, Sam and Gollum travel to Minas Morgul?  False False Yes easy
