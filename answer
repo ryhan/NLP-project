@@ -25,16 +25,16 @@ def answer(question):
   print("The answer to '" + str(question) + "' is 42.")
 
 
-# Main
-path_to_article = sys.argv[1]
-path_to_questions = sys.argv[2]
+if __name__ == '__main__':
+  path_to_article = sys.argv[1]
+  path_to_questions = sys.argv[2]
 
-# Pre-process article content.
-article_content = read_file(path_to_article)
+  # Pre-process article content.
+  article_content = read_file(path_to_article)
 
-# Open the question file and start answering questions.
-question_file = open(path_to_questions)
-for question in question_file:
-  answer(question.strip())
+  # Open the question file and start answering questions.
+  question_file = open(path_to_questions)
+  for question in question_file:
+    answer(question.strip())
 
-question_file.close()
+  question_file.close()
