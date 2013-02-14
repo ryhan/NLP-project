@@ -1,11 +1,6 @@
 NLP Term Project
 ===========
-11411 Group 6 Project
-
-Final Demo Tuesday, April 30 at Google Pittsburgh
-
-The objective of this project is to build two programs which can generate and answer questions related to a Wikipedia article.
-See [NLP Project Page](https://www.ark.cs.cmu.edu/NLP/S13/project.php)
+11411 Group 6 Project. See [NLP Project Page](https://www.ark.cs.cmu.edu/NLP/S13/project.php)
 
 ### Contributors
 
@@ -27,13 +22,17 @@ See [NLP Project Page](https://www.ark.cs.cmu.edu/NLP/S13/project.php)
 ```
 ./ask article.txt nquestions
 ```
-The asking program takes an `article.txt` containing a Wikipedia article and an integer `nquestions`.
+The asking program takes an 
+- `article.txt` containing a Wikipedia article and 
+-  an integer `nquestions`.
 
 ## Answering Program
 ```
 ./answer article.txt questions.txt
 ```
-The answering program takes an `article.txt` containing a Wikipedia article and a textfile `questions.txt` containing one question per line.
+The answering program takes an 
+- `article.txt` containing a Wikipedia article and 
+- a textfile `questions.txt` containing one question per line.
 
 ## Getting Started
 ### Permissions
