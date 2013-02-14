@@ -4,10 +4,15 @@
 # 11-411 NLP Spring 2013, Group 6
 # (Stub) Authored by Ryhan Hassan | rhassan@andrew.cmu.edu
 
+# Useful tools which should be pre-installed
 import os, sys, errno
 import re
 import itertools
 import nltk
+
+# Import our modules from /modules
+sys.path.append("modules")
+import questionContentSelector
 
 # Returns string containing content at file path.
 def read_file(path):
@@ -28,5 +33,7 @@ num_questions = sys.argv[2]
 
 # Pre-process article content.
 article_content = read_file(path_to_article)
+selected_content = questionContentSelector.process(article_content)
+print(selected_content)
 
 generateQuestions(article_content, num_questions)

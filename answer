@@ -4,10 +4,14 @@
 # 11-411 NLP Spring 2013, Group 6
 # (Stub) Authored by Ryhan Hassan | rhassan@andrew.cmu.edu
 
+# Useful tools which should be pre-installed
 import os, sys, errno
 import re
 import itertools
 import nltk
+
+# Import our modules from /modules
+sys.path.append("modules")
 
 # Returns string containing content at file path.
 def read_file(path):
