@@ -4,43 +4,8 @@ NLP Term Project
 
 Final Demo Tuesday, April 30 at Google Pittsburgh
 
-See [NLP Project Page](https://www.ark.cs.cmu.edu/NLP/S13/project.php)
-
-## Getting Started
 The objective of this project is to build two programs which can generate and answer questions related to a Wikipedia article.
-
-### Asking Program
-```
-./ask article.txt nquestions
-```
-The asking program takes an `article.txt` containing a Wikipedia article and an integer `nquestions`.
-
-### Answering Program
-```
-./answer article.txt questions.txt
-```
-The answering program takes an `article.txt` containing a Wikipedia article and a textfile `questions.txt` containing one question per line.
-
-### Setup
-
-#### Permissions
-```
-chmod +x ask
-chmod +x answer
-```
-
-#### Install NLTK
-See [NLTK installation guide](http://nltk.org/install.html)
-
-Install `setuptools` - [Download](http://pypi.python.org/pypi/setuptools)
-```
-sudo easy_install pip 
-sudo pip install -U numpy
-sudo pip install -U pyyaml nltk
-```
-
-
-## About
+See [NLP Project Page](https://www.ark.cs.cmu.edu/NLP/S13/project.php)
 
 ### Contributors
 
@@ -57,3 +22,33 @@ sudo pip install -U pyyaml nltk
 - Tuesday April 16, Project code due
 - Tuesday April 30, Demos at Google
 - Thursday May 2, Final Report
+
+## Asking Program
+```
+./ask article.txt nquestions
+```
+The asking program takes an `article.txt` containing a Wikipedia article and an integer `nquestions`.
+
+## Answering Program
+```
+./answer article.txt questions.txt
+```
+The answering program takes an `article.txt` containing a Wikipedia article and a textfile `questions.txt` containing one question per line.
+
+## Getting Started
+### Permissions
+```
+chmod +x ask
+chmod +x answer
+```
+
+### Installing NLTK
+See [NLTK installation guide](http://nltk.org/install.html)
+
+First download `setuptools`, http://pypi.python.org/pypi/setuptools
+```
+sudo sh Downloads/setuptools-...egg
+sudo easy_install pip 
+sudo pip install -U numpy
+sudo pip install -U pyyaml nltk
+```
