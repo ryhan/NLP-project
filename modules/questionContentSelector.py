@@ -34,12 +34,10 @@ def naive_score(sentence):
 def sentence_score(sentence):
   return 0.1*naive_score(sentence) + 0.9*entity_score(sentence)
 
-# GIVEN source_text string
+# GIVEN source_text string and
+# GIVEN n integer representing number of candidates to return,
 # RETURNS list of candidate strings
 def process(source_text, n):
-  if (n < 1): n = 10
-  print(n)
-  # Should probably apply co-reference resolution first.
   sentences = nltk.sent_tokenize(source_text)
   sentences = sorted(sentences, key = lambda (x): -1* sentence_score(x))
   return sentences[:int(n)]
