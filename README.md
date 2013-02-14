@@ -11,15 +11,34 @@ The objective of this project is to build two programs which can generate and an
 
 ### Asking Program
 ```
-sh ask.sh article.txt nquestions
+./ask article.txt nquestions
 ```
 The asking program takes an `article.txt` containing a Wikipedia article and an integer `nquestions`.
 
 ### Answering Program
 ```
-sh answer.sh article.txt questions.txt
+./answer article.txt questions.txt
 ```
 The answering program takes an `article.txt` containing a Wikipedia article and a textfile `questions.txt` containing one question per line.
+
+### Setup
+
+#### Permissions
+```
+chmod +x ask
+chmod +x answer
+```
+
+#### Install NLTK
+See [NLTK installation guide](http://nltk.org/install.html)
+
+Install `setuptools` - [Download](http://pypi.python.org/pypi/setuptools)
+```
+sudo easy_install pip 
+sudo pip install -U numpy
+sudo pip install -U pyyaml nltk
+```
+
 
 ## About
 
