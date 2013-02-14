@@ -51,3 +51,11 @@ sudo easy_install pip
 sudo pip install -U numpy
 sudo pip install -U pyyaml nltk
 ```
+### Download NLTK datasets
+
+```
+python
+>>> import nltk
+>>> nltk.download()
+```
+Once the NLTK Downloader GUI pops up, download all to `/Users/USERNAME/nltk_data`
