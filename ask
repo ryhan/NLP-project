@@ -33,7 +33,7 @@ num_questions = sys.argv[2]
 
 # Pre-process article content.
 article_content = read_file(path_to_article)
-selected_content = questionContentSelector.process(article_content)
+selected_content = questionContentSelector.process(article_content, int(num_questions)*10)
 print(selected_content)
 
 generateQuestions(article_content, num_questions)
