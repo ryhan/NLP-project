@@ -37,7 +37,19 @@ if __name__ == '__main__':
 
   # Fetch sentence candidates that can be converted into questions.
   selected_content = questionContentSelector.process(article_content, num_cand)
-  print(selected_content)
+  # print(selected_content)
+
+  # Temporary, incredibly naive question generator.
+  questions = [ ]
+  for sentence in selected_content:
+    if ("It is" in sentence) and (sentence[len(sentence) -1] == "."):
+      question = sentence[:len(sentence)-1] + str("?")
+      question = sentence.replace("It is", "What is")
+      questions.append(question)
+
+  questions = questions[:num_questions]
+  for question in questions:
+    print(question)
 
   # Use POS Tagging and Transformation rules to generate questions
 
