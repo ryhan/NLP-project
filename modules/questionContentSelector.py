@@ -39,5 +39,5 @@ def sentence_score(sentence):
 # RETURNS list of candidate strings
 def process(source_text, n):
   sentences = nltk.sent_tokenize(source_text)
-  sentences = sorted(sentences, key = lambda (x): -1* sentence_score(x))
+  sentences = sorted(sentences, key = lambda (x): -sentence_score(x))
   return sentences[:int(n)]
