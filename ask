@@ -14,12 +14,6 @@ import nltk
 sys.path.append("modules")
 import questionContentSelector
 
-# Returns string containing content at file path.
-def read_file(path):
-  content = ""
-  content = open(path).read()
-  return content
-
 # turns a declarative sentence into a question
 def sentenceToQuestion(sentence):
     question = sentence
@@ -42,6 +36,8 @@ if __name__ == '__main__':
   # Should probably apply co-reference resolution to article content here.
 
   # Decide how many candidates we want to generate
+    # im thinking we should always generate as many questions as possible
+    # and just pick the n best
   num_cand = num_questions*10
 
   # Fetch sentence candidates that can be converted into questions.

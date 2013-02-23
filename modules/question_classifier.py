@@ -7,14 +7,16 @@ def classifyQuestions(question):
     if question.startswith("Who "):
         return "PERSON"
     elif question.startswith("When "):
-        return "TIME"
+        return "DATE"
     elif question.startswith("Where "):
         return "LOCATION"
     elif question.startswith("What "):
         return "NOUN"
     elif question.startswith("Why ", "How "):
         return "PHRASE"
-    elif question.startswith("Is ", "Was ", "Will ", "Are ", "Were ", "DO ", "Does ", "Did "):
+    elif question.startswith("How many "):
+        return "NUMERAL"
+    elif question.startswith("Is ", "Was ", "Will ", "Are ", "Were ", "Do ", "Does ", "Did "):
         return "BOOLEAN"
     else:
         return "UNKOWN"
