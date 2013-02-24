@@ -15,14 +15,35 @@ sys.path.append("modules")
 
 # Returns string containing content at file path.
 def read_file(path):
-  content = ""
-  inputfile = open(path)
-  for line in inputfile: content += str(line)
-  inputfile.close()
-  return content
+  return open(path).read()
 
-def answer(question):
-  print("The answer to '" + str(question) + "' is 42.")
+# basically just the parts of speecn any "important" word would be
+key_POS = set(["CD","FW","NN","NNS","NP","NPS","VB","VBD","VBG","VBN","VBP","VBZ"])
+
+def getKeywords(question):
+    tagged = nltk.tag.pos_tag(question)
+    return [pair for pair in tagged if pair[1] in key_POS]
+
+def getRelevantSentences(keywords, article):
+    relevant = []
+    sentences = nltk.tokenize.sent_tokenize(article)
+    for sent in sentences:
+        sent = set(nltk.tokenize.word_tokenize(sent))
+        good = True
+        for word in keywords:
+            if word not in sent:
+                good = False
+                break
+        if good:
+            relevant.append(sent)
+    return relevant
+
+
+def answer(question, article):
+    question = question.strip()
+    question = nltk.tokenize.word_tokenize(question)
+    words = getKeywords(question)
+    return getRelevantSentences(words, article)
 
 
 if __name__ == '__main__':
@@ -33,8 +54,8 @@ if __name__ == '__main__':
   article_content = read_file(path_to_article)
 
   # Open the question file and start answering questions.
-  question_file = open(path_to_questions)
-  for question in question_file:
-    answer(question.strip())
+    with open(path_to_questions) as question_file:
+        for line in question_file:
+            print question
+            print answer(question)
 
-  question_file.close()
