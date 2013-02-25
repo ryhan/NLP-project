@@ -13,9 +13,26 @@ import nltk
 # Import our modules from /modules
 sys.path.append("modules")
 
-# Returns string containing content at file path.
-def read_file(path):
-  return open(path).read()
+def classifyQuestion(question):
+    if question.startswith("Who "):
+        return "PERSON"
+    elif question.startswith("When "):
+        return "DATE"
+    elif question.startswith("Where "):
+        return "LOCATION"
+    elif question.startswith("What "):
+        return "NOUN"
+    elif question.startswith("Why ", "How "):
+        return "PHRASE"
+    elif question.startswith("How many "):
+        return "NUMERAL"
+    elif question.startswith("Is ", "Was ", "Will ", "Are ", "Were ", "Do ", "Does ", "Did "):
+        return "BOOLEAN"
+    else:
+        return "UNKOWN"
+
+def questionsToDeclaration(question):
+    pass 
 
 # basically just the parts of speecn any "important" word would be
 key_POS = set(["CD","FW","NN","NNS","NP","NPS","VB","VBD","VBG","VBN","VBP","VBZ"])
@@ -51,11 +68,10 @@ if __name__ == '__main__':
   path_to_questions = sys.argv[2]
 
   # Pre-process article content.
-  article_content = read_file(path_to_article)
+  article = open(path_to_article).read()
 
   # Open the question file and start answering questions.
-    with open(path_to_questions) as question_file:
-        for line in question_file:
-            print question
-            print answer(question)
+  for question in open(path_to_question):
+    print question
+    print answer(question, article)
 

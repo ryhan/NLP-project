@@ -12,7 +12,7 @@ import nltk
 
 # Import our modules from /modules
 sys.path.append("modules")
-import questionContentSelector
+
 
 # turns a declarative sentence into a question
 def sentenceToQuestion(sentence):
