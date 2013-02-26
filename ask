@@ -12,12 +12,8 @@ import nltk
 
 # Import our modules from /modules
 sys.path.append("modules")
-<<<<<<< HEAD
-=======
 import questionContentSelector
 import questionFromSentence
->>>>>>> Moved declarative -> question transformation into independent module
-
 
 # turns a declarative sentence into a question
 def sentenceToQuestion(sentence):
@@ -41,24 +37,15 @@ if __name__ == '__main__':
   # Should probably apply co-reference resolution to article content here.
 
   # Decide how many candidates we want to generate
-<<<<<<< HEAD
-    # im thinking we should always generate as many questions as possible
-    # and just pick the n best
+  # im thinking we should always generate as many questions as possible
+  # and just pick the n best
   num_cand = num_questions*10
-=======
-  num_cand = num_questions*50
->>>>>>> Moved declarative -> question transformation into independent module
 
   # Fetch sentence candidates that can be converted into questions.
   selected_content = questionContentSelector.process(article_content, num_cand)
 
   # Use POS Tagging and Transformation rules to generate questions
-<<<<<<< HEAD
-  # Below is a temporary, incredibly naive question generator.
-  questions = [sentenceToQuestion(sentence)) for sentence in selected_content]
-=======
   questions = questionFromSentence.process(selected_content)
->>>>>>> Moved declarative -> question transformation into independent module
 
   # Rank generated questions and return top [:num_questions]
 
