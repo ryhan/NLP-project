@@ -10,6 +10,7 @@ import re
 import itertools
 import nltk
 from nltk.stem import PorterStemmer
+#import nltk_contrib
 
 # Import our modules from /modules
 sys.path.append("modules")
@@ -23,11 +24,11 @@ def classifyQuestion(question):
         return "LOCATION"
     elif question.startswith("What "):
         return "NOUN"
-    elif question.startswith("Why ", "How "):
+    elif question.startswith(("Why ", "How ")):
         return "PHRASE"
     elif question.startswith("How many "):
         return "NUMERAL"
-    elif question.startswith("Is ", "Was ", "Will ", "Are ", "Were ", "Do ", "Does ", "Did "):
+    elif question.startswith(("Is ", "Was ", "Will ", "Are ", "Were ", "Do ", "Does ", "Did ")):
         return "BOOLEAN"
     else:
         return "UNKOWN"
@@ -56,9 +57,8 @@ def getKeywords(question):
     result = []
     for tag in tagged:
       if tag[1] == "NNP":
-        # ignore named entities for now until we implement Coreference Resolution
-        #result.append(tag[0])
-        pass
+        # named entities aren't that helpful until we implement coreference resolution
+        result.append(tag[0])
       else:
         result.append(ps.stem(tag[0]))
     return result
@@ -79,14 +79,26 @@ def getRelevantSentences(keywords, article):
         relevant.append((sent, score))
     return relevant
 
+def contains_negative(sent):
+  return "no" in sent or "not" in sent or \
+  "didn't" in sent or "did not" in sent
 
+# picks the sentence that has the most keywords in common with the question
 def answer(question, article):
     question = question.strip()
+    question_type = classifyQuestion(question)
     question = nltk.tokenize.word_tokenize(question)
     words = getKeywords(question)
     relevant = getRelevantSentences(words, article)
     relevant.sort(key = lambda s: s[1], reverse=True)
-    return [s[0] for s in relevant][0]
+    top = relevant[0][0]
+    if question_type == "BOOLEAN":
+      if contains_negative(top):
+        return "NO"
+      else:
+        return "YES"
+    else:
+      return top
 
 
 if __name__ == '__main__':
