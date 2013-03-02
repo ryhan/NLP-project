@@ -9,6 +9,7 @@ import os, sys, errno
 import re
 import itertools
 import nltk
+from nltk.stem import PorterStemmer
 
 # Import our modules from /modules
 sys.path.append("modules")
@@ -31,28 +32,51 @@ def classifyQuestion(question):
     else:
         return "UNKOWN"
 
-def questionsToDeclaration(question):
-    pass 
-
 # basically just the parts of speecn any "important" word would be
-key_POS = set(["CD","FW","NN","NNS","NP","NPS","VB","VBD","VBG","VBN","VBP","VBZ"])
+key_POS = set(["CD","FW","NN","NNS","NNP","NPS","VB","VBD","VBG","VBN","VBP","VBZ"])
+# auxillary verbs we should ignore
+aux = set(["is", "was", "did", "does", "do", "were", "are"])
+
+# we should probably change this to the WordNet lemmatizer, but this is ok for now
+ps = PorterStemmer()
+
+#entity_names = []
+#
+#if hasattr(t, 'node') and t.node:
+#    if t.node == 'NE':
+#        entity_names.append(' '.join([child[0] for child in t]))
+#    else:
+#        for child in t:
+#            entity_names.extend(extract_entity_names(child))
 
 def getKeywords(question):
     tagged = nltk.tag.pos_tag(question)
-    return [pair for pair in tagged if pair[1] in key_POS]
+    #nltk.ne_chunk(tagged)
+    tagged = [pair for pair in tagged if pair[1] in key_POS and pair[0].lower() not in aux]
+    result = []
+    for tag in tagged:
+      if tag[1] == "NNP":
+        # ignore named entities for now until we implement Coreference Resolution
+        #result.append(tag[0])
+        pass
+      else:
+        result.append(ps.stem(tag[0]))
+    return result
 
 def getRelevantSentences(keywords, article):
     relevant = []
     sentences = nltk.tokenize.sent_tokenize(article)
+    print keywords
     for sent in sentences:
-        sent = set(nltk.tokenize.word_tokenize(sent))
-        good = True
+        sentence_set = set(nltk.tokenize.word_tokenize(sent))
+        sentence_set = map(ps.stem, sentence_set)
+        #print keywords
+        #print sentence_set
+        score = 0
         for word in keywords:
-            if word not in sent:
-                good = False
-                break
-        if good:
-            relevant.append(sent)
+            if word in sentence_set:
+                score += 1
+        relevant.append((sent, score))
     return relevant
 
 
@@ -60,7 +84,9 @@ def answer(question, article):
     question = question.strip()
     question = nltk.tokenize.word_tokenize(question)
     words = getKeywords(question)
-    return getRelevantSentences(words, article)
+    relevant = getRelevantSentences(words, article)
+    relevant.sort(key = lambda s: s[1], reverse=True)
+    return [s[0] for s in relevant][0]
 
 
 if __name__ == '__main__':
@@ -71,7 +97,6 @@ if __name__ == '__main__':
   article = open(path_to_article).read()
 
   # Open the question file and start answering questions.
-  for question in open(path_to_question):
+  for question in open(path_to_questions):
     print question
     print answer(question, article)
-
