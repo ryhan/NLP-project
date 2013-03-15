@@ -10,9 +10,10 @@ import re
 import itertools
 import nltk
 from nltk.stem import PorterStemmer
+#import nltk_contrib
+
 # Import our modules from /modules
 sys.path.append("modules")
-#from nltk_contrib.coref.resolve import BaselineCorefResolver
 
 def classifyQuestion(question):
     if question.startswith("Who "):
@@ -62,14 +63,6 @@ def getKeywords(question):
         result.append(ps.stem(tag[0]))
     return result
 
-#resolver = BaselineCorefResolver()
-#
-#def corefResolve(article):
-#  sentences = nltk.sent_tokenize(article)
-#  tokenized_sentences = [nltk.word_tokenize(sentence) for sentence in sentences]
-#  resolved = resolver.resolve(tokenized_sentences)
-#  print resolved
-
 def getRelevantSentences(keywords, article):
     relevant = []
     sentences = nltk.tokenize.sent_tokenize(article)
@@ -114,7 +107,6 @@ if __name__ == '__main__':
 
   # Pre-process article content.
   article = open(path_to_article).read()
-  #print coref_resolve(article)
 
   # Open the question file and start answering questions.
   for question in open(path_to_questions):
