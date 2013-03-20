@@ -17,14 +17,6 @@ sys.path.append("modules")
 import questionClassifier
 import sourceContentSelector
 
-# basically just the parts of speecn any "important" word would be
-key_POS = set(["CD","FW","NN","NNS","NNP","NPS","VB","VBD","VBG","VBN","VBP","VBZ"])
-# auxillary verbs we should ignore
-aux = set(["is", "was", "did", "does", "do", "were", "are"])
-
-# we should probably change this to the WordNet lemmatizer, but this is ok for now
-ps = PorterStemmer()
-
 #entity_names = []
 #
 #if hasattr(t, 'node') and t.node:
