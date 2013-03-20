@@ -10,10 +10,9 @@ def lem(list):
 
   lemmaList = []
 
-<<<<<<< HEAD
   for word,tag in pos:
     temp = set({word})
-    
+
     if tag[0] == 'N':
       for ss in wn.synsets(word, pos=wn.NOUN):
         temp.update(set(lemma.name for lemma in ss.lemmas))
@@ -25,21 +24,4 @@ def lem(list):
     else:
       lemmaList.append({word})
 
-  
   return lemmaList
-
-
-lem(['I','destroyed','the','facility'])
-
-
-=======
-  for word in list:
-    temp = []
-    for ss in wn.synsets(word):
-      temp += [lemma.name for lemma in ss.lemmas]
-    lemmaList.append(temp)
-
-  print lemmaList
-
-print wn.synsets("destroy", pos=wn.VERB)
->>>>>>> Revert "Test"
