@@ -2,7 +2,6 @@
 
 # answer
 # 11-411 NLP Spring 2013, Group 6
-# (Stub) Authored by Ryhan Hassan | rhassan@andrew.cmu.edu
 
 # Useful tools which should be pre-installed
 import os, sys, errno
@@ -15,31 +14,8 @@ from nltk.stem import PorterStemmer
 # Import our modules from /modules
 sys.path.append("modules")
 
-def classifyQuestion(question):
-    if question.startswith("Who "):
-        return "PERSON"
-    elif question.startswith("When "):
-        return "DATE"
-    elif question.startswith("Where "):
-        return "LOCATION"
-    elif question.startswith("What "):
-        return "NOUN"
-    elif question.startswith(("Why ", "How ")):
-        return "PHRASE"
-    elif question.startswith("How many "):
-        return "NUMERAL"
-    elif question.startswith(("Is ", "Was ", "Will ", "Are ", "Were ", "Do ", "Does ", "Did ")):
-        return "BOOLEAN"
-    else:
-        return "UNKOWN"
-
-# basically just the parts of speecn any "important" word would be
-key_POS = set(["CD","FW","NN","NNS","NNP","NPS","VB","VBD","VBG","VBN","VBP","VBZ"])
-# auxillary verbs we should ignore
-aux = set(["is", "was", "did", "does", "do", "were", "are"])
-
-# we should probably change this to the WordNet lemmatizer, but this is ok for now
-ps = PorterStemmer()
+import questionClassifier
+import sourceContentSelector
 
 #entity_names = []
 #
@@ -50,35 +26,6 @@ ps = PorterStemmer()
 #        for child in t:
 #            entity_names.extend(extract_entity_names(child))
 
-def getKeywords(question):
-    tagged = nltk.tag.pos_tag(question)
-    #nltk.ne_chunk(tagged)
-    tagged = [pair for pair in tagged if pair[1] in key_POS and pair[0].lower() not in aux]
-    result = []
-    for tag in tagged:
-      if tag[1] == "NNP":
-        # named entities aren't that helpful until we implement coreference resolution
-        result.append(tag[0])
-      else:
-        result.append(ps.stem(tag[0]))
-    return result
-
-def getRelevantSentences(keywords, article):
-    relevant = []
-    sentences = nltk.tokenize.sent_tokenize(article)
-    print keywords
-    for sent in sentences:
-        sentence_set = set(nltk.tokenize.word_tokenize(sent))
-        sentence_set = map(ps.stem, sentence_set)
-        #print keywords
-        #print sentence_set
-        score = 0
-        for word in keywords:
-            if word in sentence_set:
-                score += 1
-        relevant.append((sent, score))
-    return relevant
-
 def contains_negative(sent):
   return "no" in sent or "not" in sent or \
   "didn't" in sent or "did not" in sent
@@ -86,10 +33,10 @@ def contains_negative(sent):
 # picks the sentence that has the most keywords in common with the question
 def answer(question, article):
     question = question.strip()
-    question_type = classifyQuestion(question)
+    question_type = questionClassifier.process(question)
     question = nltk.tokenize.word_tokenize(question)
-    words = getKeywords(question)
-    relevant = getRelevantSentences(words, article)
+    relevant = sourceContentSelector.process(question, article)
+
     relevant.sort(key = lambda s: s[1], reverse=True)
     top = relevant[0][0]
     if question_type == "BOOLEAN":
