@@ -28,14 +28,22 @@ def transform(sentence):
   (question, success) = transform_IT_IS(sentence)
   if success: return (question, True)
 
-  """
-  # Switch PRP and VBZ
+  # Switch PRP and VBZ Be
+  BEING = [ "IS", "ARE", "WAS", "WERE"]
   tokens = nltk.word_tokenize(sentence)
+  posTag = nltk.pos_tag([tokens[0]])[0]
+
+  #if (tokens[1].upper() in BEING and posTag == 'PRP'):
+  if (tokens[1].upper() in BEING):
+    tokens = [tokens[1].capitalize(), tokens[0].lower()] + tokens[2:]
+    return (" ".join(tokens), True)
+
+  """
   tagged = nltk.pos_tag(tokens)
   entities = nltk.chunk.ne_chunk(tagged)
 
-  (word0, tag0) = entities[0]
-  (word1, tag1) = entities[1]
+  (word0, tag0) = tagged[0]
+  (word1, tag1) = tagged[1]
   if (tag0 == 'PRP' and tag1 =='VBZ'):
     tokens = [word1.capitalize(), word0.lower()] + tokens[2:]
     return (" ".join(tokens), True)
