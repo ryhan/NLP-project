@@ -8,11 +8,22 @@
 import re
 import nltk
 
-# Use part-of-speech tagging and entity chunking to 
+# Use part-of-speech tagging to 
 # score the usefulness of a sentence.
 def entity_score(sentence):
-  # tokens = nltk.word_tokenize(sentence)
-  # tagged = nltk.pos_tag(tokens)
+  tokens = nltk.word_tokenize(sentence)
+  tokensU = map(lambda (x): x.upper, tokens)
+  if (2 < len(tokens) and len(tokens) < 12):
+    if ("IS" in tokensU or "WAS" in tokensU or
+        "WERE" in tokensU or "BEING" in tokensU or
+        "ARE" in tokensU):
+
+      if (nltk.pos_tag([tokens[0]])[0] == "PRP"):
+        return 1.0
+      else:
+        return 0.5 
+
+  #tagged = nltk.pos_tag(tokens)
   # entities = nltk.chunk.ne_chunk(tagged)
   score = 0
   return score
