@@ -1,3 +1,6 @@
+# extractor.py
+# named entity recognition, currently unused.
+
 import nltk
  
 with open('para.txt', 'r') as f:

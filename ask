@@ -14,17 +14,6 @@ sys.path.append("modules")
 import questionContentSelector
 import questionFromSentence
 
-# turns a declarative sentence into a question
-def sentenceToQuestion(sentence):
-    question = sentence
-    if ("It is" in sentence) and (sentence[len(sentence) -1] == "."):
-      question = sentence[:len(sentence)-1] + str("?")
-      question = sentence.replace("It is", "What is")
-    elif " is " in question:
-        i = question.index("is")
-        question = question[i:i+2] + question[:i] + quesiton[i+2:]
-    return question
-
 if __name__ == '__main__':
   path_to_article = sys.argv[1]
   num_questions = int(sys.argv[2])
