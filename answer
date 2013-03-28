@@ -9,13 +9,13 @@ import re
 import itertools
 import nltk
 from nltk.stem import PorterStemmer
-#import nltk_contrib
 
 # Import our modules from /modules
 sys.path.append("modules")
 
 import questionClassifier
 import sourceContentSelector
+from nltk_contrib.coref.resolve import BaselineCorefResolver
 
 #entity_names = []
 #
@@ -29,6 +29,8 @@ import sourceContentSelector
 def contains_negative(sent):
   return "no" in sent or "not" in sent or \
   "didn't" in sent or "did not" in sent
+
+resolver = BaselineCorefResolver()
 
 # picks the sentence that has the most keywords in common with the question
 def answer(question, article):
@@ -54,6 +56,7 @@ if __name__ == '__main__':
 
   # Pre-process article content.
   article = open(path_to_article).read()
+
 
   # Open the question file and start answering questions.
   for question in open(path_to_questions):
