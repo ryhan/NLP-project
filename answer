@@ -51,6 +51,7 @@ def answer(question, article):
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
   article_name = sys.argv[1]
 
   for year in ("S08", "S09", "S10"):
@@ -73,6 +74,15 @@ if __name__ == '__main__':
       print "Question:", question
       print "Difficulty from answerer:", difficulty_answerer
       print "Difficulty from questioner:", difficulty_questioner
+=======
+
+  if(len(sys.argv)) < 3:
+    print 'Usage: <article path> <questions path>'
+    sys.exit(1)
+    
+  path_to_article = sys.argv[1]
+  path_to_questions = sys.argv[2]
+>>>>>>> Usefull printout
 
       # Open the question file and start answering questions.
       article = open(prefix+path_to_article+".txt").read()
