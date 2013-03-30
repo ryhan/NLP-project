@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Version: 1.3.4
+Created-By: Stanford JavaNLP (horatio)
+Main-class: edu.stanford.nlp.pipeline.StanfordCoreNLP
+Built-Date: 2012-11-12
+

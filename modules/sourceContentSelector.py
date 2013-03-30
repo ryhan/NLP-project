@@ -51,3 +51,31 @@ def getRelevantSentences(keywords, article):
               score += 1
       relevant.append((sent, score))
   return relevant
+
+# compare two sentences using ngrams (upto trigram)
+def ngramWeight(question,sentence):
+  #stem and take set intersections for unigrams
+  uniQ = map(ps.stem, nltk.word_tokenize(question))
+  uniS = map(ps.stem, nltk.word_tokenize(sentence))
+  unigram = set(uniQ).intersection(set(uniS))
+
+  #get all bigram overlaps, rolls around end of sentence
+  bigramQ = {uniQ[i-1]+uniQ[i] for i,word in enumerate(uniQ)}
+  bigramS = {uniS[i-1]+uniS[i] for i,word in enumerate(uniS)}
+  bigram = bigramQ.intersection(bigramS)
+
+  trigramQ = {uniQ[i-2]+uniQ[i-1]+uniQ[i] for i,word in enumerate(uniQ)}
+  trigramS = {uniS[i-2]+uniS[i-1]+uniS[i] for i,word in enumerate(uniS)}
+  trigram = trigramQ.intersection(trigramS)
+  
+  lam1 = 0.2
+  lam2 = 0.3
+  lam3 = 0.5
+
+  return lam1*len(unigram) + lam2*len(bigram) + lam3*len(trigram)
+
+if __name__ == '__main__':
+    ngramWeight('I like dolphin now','Sam also likes dolphins now')
+
+
+
