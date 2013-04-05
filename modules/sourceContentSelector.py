@@ -16,12 +16,6 @@ aux = set(["is", "was", "did", "does", "do", "were", "are"])
 # we should probably change this to the WordNet lemmatizer, but this is ok for now
 ps = PorterStemmer()
 
-# Given a question, returns relevant parts of an article
-def process (question, article):
-  keywords = getKeywords(question)
-  relevant = getRelevantSentences(keywords, article)
-  return relevant
-
 # Given a question, returns a list of keywords
 def getKeywords(question):
   tagged = nltk.tag.pos_tag(question)
@@ -34,29 +28,41 @@ def getKeywords(question):
       result.append(tag[0])
     else:
       result.append(ps.stem(tag[0]))
-  return result
+  return set(result)
 
-def getRelevantSentences(keywords, article):
+# Given a question, returns relevant parts of an article
+def getRelevantSentences(question, article):
   relevant = []
   sentences = nltk.tokenize.sent_tokenize(article)
-  print keywords
   for sent in sentences:
-      sentence_set = set(nltk.tokenize.word_tokenize(sent))
-      sentence_set = map(ps.stem, sentence_set)
-      #print keywords
-      #print sentence_set
-      score = 0
-      for word in keywords:
-          if word in sentence_set:
-              score += 1
-      relevant.append((sent, score))
+      sentence = nltk.tokenize.word_tokenize(sent)
+      sentence = map(ps.stem, sentence)
+      s = score(question, sentence)
+      relevant.append((sent, s))
   return relevant
 
+def score(question, sentence):
+    score = 0
+    score += ngramWeight(question, sentence)
+    keywords = getKeywords(question)
+    score += proximity(keywords, sentence)
+    return score
+
+# measures the proximity of the keywords from the original query to each other
+def proximity(keywords, sentence):
+    length = len(sentence)
+    for i in range(len(keywords), length+1):
+        for j in range(length+1-i):
+            words = set(sentence[j:i+j])
+            if keywords <= words:
+                return 10-i
+    return 0
+
 # compare two sentences using ngrams (upto trigram)
-def ngramWeight(question,sentence):
+def ngramWeight(question, sentence):
   #stem and take set intersections for unigrams
-  uniQ = map(ps.stem, nltk.word_tokenize(question))
-  uniS = map(ps.stem, nltk.word_tokenize(sentence))
+  uniQ = map(ps.stem, question)
+  uniS = sentence
   unigram = set(uniQ).intersection(set(uniS))
 
   #get all bigram overlaps, rolls around end of sentence
@@ -67,7 +73,7 @@ def ngramWeight(question,sentence):
   trigramQ = {uniQ[i-2]+uniQ[i-1]+uniQ[i] for i,word in enumerate(uniQ)}
   trigramS = {uniS[i-2]+uniS[i-1]+uniS[i] for i,word in enumerate(uniS)}
   trigram = trigramQ.intersection(trigramS)
-  
+
   lam1 = 0.2
   lam2 = 0.3
   lam3 = 0.5
@@ -75,7 +81,4 @@ def ngramWeight(question,sentence):
   return lam1*len(unigram) + lam2*len(bigram) + lam3*len(trigram)
 
 if __name__ == '__main__':
-    ngramWeight('I like dolphin now','Sam also likes dolphins now')
-
-
-
+    print proximity(set(["the", "moon", "stroke"]), ["I",  "want", "to", "see", "the", "moon", "stroke"])

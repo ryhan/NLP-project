@@ -21,7 +21,7 @@ def process(question):
         return "PHRASE"
     elif question.startswith("How many "):
         return "NUMERAL"
-    elif question.startswith(("Is ", "Was ", "Will ", "Are ", "Were ", "Do ", "Does ", "Did ")):
+    elif question.startswith(("Is ", "Was ", "Will ", "Are ", "Were ", "Do ", "Does ", "Did ", "Have ", "Has ")):
         return "BOOLEAN"
     else:
         return "UNKOWN"

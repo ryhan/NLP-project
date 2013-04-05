@@ -9,49 +9,30 @@ import re
 import itertools
 import nltk
 from nltk.stem import PorterStemmer
-
 # Import our modules from /modules
 sys.path.append("modules")
-
 import questionClassifier
 import sourceContentSelector
-#from nltk_contrib.coref.resolve import BaselineCorefResolver
-
-#entity_names = []
-#
-#if hasattr(t, 'node') and t.node:
-#    if t.node == 'NE':
-#        entity_names.append(' '.join([child[0] for child in t]))
-#    else:
-#        for child in t:
-#            entity_names.extend(extract_entity_names(child))
 
 def contains_negative(sent):
-  return "no" in sent or "not" in sent or \
-  "didn't" in sent or "did not" in sent
-
-#resolver = BaselineCorefResolver()
+  return "no" in sent or "not" in sent or "n't" in sent
 
 # picks the sentence that has the most keywords in common with the question
 def answer(question, article):
     question = question.strip()
     question_type = questionClassifier.process(question)
     question = nltk.tokenize.word_tokenize(question)
-    relevant = sourceContentSelector.process(question, article)
-
+    relevant = sourceContentSelector.getRelevantSentences(question, article)
     relevant.sort(key = lambda s: s[1], reverse=True)
     top = relevant[0][0]
     if question_type == "BOOLEAN":
-      if contains_negative(top):
-        return "NO"
-      else:
-        return "YES"
+      if contains_negative(top): return "NO"
+      else: return "YES"
     else:
       return top
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
   article_name = sys.argv[1]
 
   for year in ("S08", "S09", "S10"):
@@ -74,15 +55,6 @@ if __name__ == '__main__':
       print "Question:", question
       print "Difficulty from answerer:", difficulty_answerer
       print "Difficulty from questioner:", difficulty_questioner
-=======
-
-  if(len(sys.argv)) < 3:
-    print 'Usage: <article path> <questions path>'
-    sys.exit(1)
-    
-  path_to_article = sys.argv[1]
-  path_to_questions = sys.argv[2]
->>>>>>> Usefull printout
 
       # Open the question file and start answering questions.
       article = open(prefix+path_to_article+".txt").read()
