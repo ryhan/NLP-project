@@ -1,0 +1,28 @@
+Stephen Bly
+Ryhan Hasan
+Daniel Sedra
+
+Team 6
+
+We used Python (mostly NLTK) and Java (arkref). We are still working on coreference resolution.
+
+
+Ask:
+
+First splits file into sentences and then ranks them based on length and presence of 'It is' or 'is'. It then generates question using handwritten rules.
+
+Example:
+
+./ask Question_Answer_Dataset_v1.1/S08/data/set1/a1.txt 4
+
+generates 4 questions from a1.txt
+
+Answer:
+
+Given a quesition we search for relevant sentences using n-gram overlap and keyword proximity. This sentence is then returned.
+
+Example: 
+
+./answer elephant
+
+goes to  Question_Answer_Dataset_v1.1 and each year answering every question from every year.
