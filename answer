@@ -5,6 +5,7 @@
 
 # Useful tools which should be pre-installed
 import os, sys, errno
+import subprocess
 import re
 import itertools
 import nltk
@@ -16,6 +17,10 @@ import sourceContentSelector
 
 def contains_negative(sent):
   return "no" in sent or "not" in sent or "n't" in sent
+
+def coref(path_to_article):
+  #subprocess.call(["./arkref.sh", "-input", path_to_article])
+  return open(path_to_article).read()
 
 # picks the sentence that has the most keywords in common with the question
 def answer(question, article):
@@ -47,7 +52,7 @@ if __name__ == '__main__':
       if end == -1: continue
       question = line[:end+1].strip()
       line = line[end+1:].split()
-      path_to_article = line.pop()
+      path_to_article = prefix+line.pop()+".txt"
       difficulty_answerer = line.pop()
       difficulty_questioner = line.pop()
       correct_answer = " ".join(line)
@@ -57,7 +62,7 @@ if __name__ == '__main__':
       print "Difficulty from questioner:", difficulty_questioner
 
       # Open the question file and start answering questions.
-      article = open(prefix+path_to_article+".txt").read()
+      article = coref(path_to_article)
       print "Our answer:", answer(question, article)
       print "Correct answer:", correct_answer
 
