@@ -62,17 +62,17 @@
             <NER>O</NER>
           </token>
         </tokens>
-        <parse>(ROOT (S (NP (NNP Stanford) (NNP University)) (VP (VBZ is) (ADJP (JJ located) (PP (IN in) (NP (NNP California))))) (. .))) </parse>
+        <parse>(ROOT (S (NP (NNP Stanford) (NNP University)) (VP (VBZ is) (VP (VBN located) (PP (IN in) (NP (NNP California))))) (. .))) </parse>
         <basic-dependencies>
           <dep type="nn">
             <governor idx="2">University</governor>
             <dependent idx="1">Stanford</dependent>
           </dep>
-          <dep type="nsubj">
+          <dep type="nsubjpass">
             <governor idx="4">located</governor>
             <dependent idx="2">University</dependent>
           </dep>
-          <dep type="cop">
+          <dep type="auxpass">
             <governor idx="4">located</governor>
             <dependent idx="3">is</dependent>
           </dep>
@@ -90,11 +90,11 @@
             <governor idx="2">University</governor>
             <dependent idx="1">Stanford</dependent>
           </dep>
-          <dep type="nsubj">
+          <dep type="nsubjpass">
             <governor idx="4">located</governor>
             <dependent idx="2">University</dependent>
           </dep>
-          <dep type="cop">
+          <dep type="auxpass">
             <governor idx="4">located</governor>
             <dependent idx="3">is</dependent>
           </dep>
@@ -108,11 +108,11 @@
             <governor idx="2">University</governor>
             <dependent idx="1">Stanford</dependent>
           </dep>
-          <dep type="nsubj">
+          <dep type="nsubjpass">
             <governor idx="4">located</governor>
             <dependent idx="2">University</dependent>
           </dep>
-          <dep type="cop">
+          <dep type="auxpass">
             <governor idx="4">located</governor>
             <dependent idx="3">is</dependent>
           </dep>
