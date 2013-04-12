@@ -72,19 +72,19 @@ def ngramWeight(question, sentence):
 
 
   #get all bigram overlaps, rolls around end of sentence
-  if len(uniQ > 1):
+  if len(uniQ) > 1 and len(uniS) > 1:
     bigramQ = {uniQ[i-1]+uniQ[i] for i,word in enumerate(uniQ)}
     bigramS = {uniS[i-1]+uniS[i] for i,word in enumerate(uniS)}
     bigram = bigramQ.intersection(bigramS)
   else:
-      bigram = 0
+      bigram = {}
 
-  if len(uniQ > 2):
+  if len(uniQ) > 2 and len(uniS) > 1:
     trigramQ = {uniQ[i-2]+uniQ[i-1]+uniQ[i] for i,word in enumerate(uniQ)}
     trigramS = {uniS[i-2]+uniS[i-1]+uniS[i] for i,word in enumerate(uniS)}
     trigram = trigramQ.intersection(trigramS)
   else:
-      trigram = 0
+      trigram = {}
 
       
   lam1 = 0.2
