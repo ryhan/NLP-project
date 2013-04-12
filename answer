@@ -32,7 +32,7 @@ pronouns = set(["he", "she", "it", "him", "her", "his"])
 # This still needs to be implemented.
 def coref(path_to_article):
   subprocess.call(["./arkref.sh", "-input", path_to_article])
-  path_to_article = path_to_article.replace("txt", "tagged")
+  #path_to_article = path_to_article.replace("txt", "tagged")
   return open(path_to_article).read()
 
 # Answers a question from the information in article.
