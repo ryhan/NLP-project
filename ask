@@ -24,13 +24,8 @@ if __name__ == '__main__':
 
   # Should probably apply co-reference resolution to article content here.
 
-  # Decide how many candidates we want to generate
-  # im thinking we should always generate as many questions as possible
-  # and just pick the n best
-  num_cand = num_questions*20
-
   # Fetch sentence candidates that can be converted into questions.
-  selected_content = questionContentSelector.process(article_content, num_cand)
+  selected_content = questionContentSelector.process(article_content)
 
   # Use POS Tagging and Transformation rules to generate questions
   questions = questionFromSentence.process(selected_content)

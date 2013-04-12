@@ -8,6 +8,8 @@ import re, string
 import itertools
 import nltk
 
+# Returns what type of answer the question is looking for.
+# Turned out not to be too useful.
 def process(question):
     if question.startswith("Who "):
         return "PERSON"
@@ -21,7 +23,7 @@ def process(question):
         return "PHRASE"
     elif question.startswith("How many "):
         return "NUMERAL"
-    elif question.startswith(("Is ", "Was ", "Will ", "Are ", "Were ", "Do ", "Does ", "Did ", "Have ", "Has ")):
+    elif question.startswith(("Is ", "Was ", "Will ", "Are ", "Were ", "Do ", "Does ", "Did ", "Have ", "Has ", "Can ")):
         return "BOOLEAN"
     else:
         return "UNKOWN"

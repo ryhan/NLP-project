@@ -3,6 +3,9 @@
 # answer
 # 11-411 NLP Spring 2013, Group 6
 
+# To run, type ./answer article_name
+# e.g. ./answer
+
 # Useful tools which should be pre-installed
 import os, sys, errno
 import subprocess
@@ -10,33 +13,44 @@ import re
 import itertools
 import nltk
 from nltk.stem import PorterStemmer
+import xml.etree.ElementTree as ET
 # Import our modules from /modules
 sys.path.append("modules")
 import questionClassifier
 import sourceContentSelector
 
+# To answer yes/no question, we want to just answer yes or no,
+# and not returna  whole sentence. We do this by checking for
+# any negatives in the sentence.
 def contains_negative(sent):
   return "no" in sent or "not" in sent or "n't" in sent
 
+# the set of pronouns, used for anaphora resolution
+pronouns = set(["he", "she", "it", "him", "her", "his"])
+
+# Runs coreference resolution on the article using arkref.
+# This still needs to be implemented.
 def coref(path_to_article):
-  #subprocess.call(["./arkref.sh", "-input", path_to_article])
+  subprocess.call(["./arkref.sh", "-input", path_to_article])
+  path_to_article = path_to_article.replace("txt", "tagged")
   return open(path_to_article).read()
 
-# picks the sentence that has the most keywords in common with the question
+# Answers a question from the information in article.
+# Ranks all the sentences and then returns the top choice.
 def answer(question, article):
     question = question.strip()
     question_type = questionClassifier.process(question)
     question = nltk.tokenize.word_tokenize(question)
-    relevant = sourceContentSelector.getRelevantSentences(question, article)
-    relevant.sort(key = lambda s: s[1], reverse=True)
-    top = relevant[0][0]
+    relevant = sourceContentSelector.getScoredSentences(question, article)
+    top = max(relevant, key = lambda s: s[1])
     if question_type == "BOOLEAN":
-      if contains_negative(top): return "NO"
-      else: return "YES"
+      if contains_negative(top): return "No"
+      else: return "Yes"
     else:
       return top
 
 
+# The main script
 if __name__ == '__main__':
   article_name = sys.argv[1]
 

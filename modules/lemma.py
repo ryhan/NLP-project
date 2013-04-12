@@ -1,5 +1,6 @@
-# takes in a word list and returns a list of lists
-# each nested list is a list of lemmas for each word
+# Takes in a word list (i.e. a sentence) and returns a list of sets.
+# That is, each word in the original list is replaced by the set of
+# its lemmas, from WordNet.
 
 import nltk
 from nltk.corpus import wordnet as wn

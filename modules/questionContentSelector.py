@@ -8,7 +8,7 @@
 import re
 import nltk
 
-# Use part-of-speech tagging to 
+# Use part-of-speech tagging to
 # score the usefulness of a sentence.
 def entity_score(sentence):
   tokens = nltk.word_tokenize(sentence)
@@ -17,11 +17,10 @@ def entity_score(sentence):
     if ("IS" in tokensU or "WAS" in tokensU or
         "WERE" in tokensU or "BEING" in tokensU or
         "ARE" in tokensU):
-
       if (nltk.pos_tag([tokens[0]])[0] == "PRP"):
         return 1.0
       else:
-        return 0.5 
+        return 0.5
 
   #tagged = nltk.pos_tag(tokens)
   # entities = nltk.chunk.ne_chunk(tagged)
@@ -37,7 +36,7 @@ def naive_score(sentence):
     not weird,             # Avoid weird characters
     "It is" in sentence,   # Look for "It is ..."
     " is " in sentence,    # Look for "[foo] is [bar]"
-    4 < word_count < 12,  
+    4 < word_count < 12,
     5 < word_count < 7
   ]
   return float(sum(features))/len(features)
@@ -48,7 +47,7 @@ def sentence_score(sentence):
 # GIVEN source_text string and
 # GIVEN n integer representing number of candidates to return,
 # RETURNS list of candidate strings
-def process(source_text, n):
+def process(source_text):
   sentences = nltk.sent_tokenize(source_text)
   sentences = sorted(sentences, key = lambda (x): -sentence_score(x))
-  return sentences[:int(n)]
+  return sentences
