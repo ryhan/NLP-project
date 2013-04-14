@@ -3,8 +3,8 @@
 
 import nltk
 
-sample = open("para.txt").read()
-
+#sample = open("para.txt").read()
+sample = 'I like Harvard and partitions'
 sentences = nltk.sent_tokenize(sample)
 tokenized_sentences = [nltk.word_tokenize(sentence) for sentence in sentences]
 tagged_sentences = [nltk.pos_tag(sentence) for sentence in tokenized_sentences]
@@ -43,4 +43,4 @@ wantset = set(['PRP','VB','VBN','NN','NNS','CD'])
 for (x,y) in tagged_sentences[0]:
   if y in wantset:
     entity_names.append(x)
-print entity_names
+#print entity_names
