@@ -13,7 +13,7 @@ import re
 import itertools
 import nltk
 from nltk.stem import PorterStemmer
-from bs4 import BeautifulSoup
+import bs4
 # Import our modules from /modules
 sys.path.append("modules")
 import questionClassifier
@@ -27,7 +27,7 @@ def contains_negative(sent):
 
 # the set of pronouns, used for anaphora resolution
 pronouns = set(["he", "she", "it", "him", "her", "his","they","their","we",
-                "our","I","you","your","my","mine","yours","ours"])
+                "our","i","you","your","my","mine","yours","ours"])
 
 # Runs coreference resolution on the article using arkref.
 # This still needs to be implemented.
@@ -35,8 +35,16 @@ def coref(path_to_article):
   subprocess.call(["./arkref.sh", "-input", path_to_article])
   tagged_article = open(path_to_article.replace("txt", "tagged")).read()
   tagged_article = "<root>"+tagged_article+"</root>"
-  soup = BeautifulSoup(tagged_article, "xml")
-  print soup.prettify()
+  print tagged_article
+  soup = bs4.BeautifulSoup(tagged_article, "html.parser").root
+  for entity in soup.find_all(True):
+    if entity.string != None and entity.string.strip().lower() in pronouns:
+      antecedent_id = entity["entityid"].split("_")[0]
+      antecedent = soup.find(mentionid=antecedent_id)
+      #entity.string.replace_with(antecedent)
+      print antecedent
+    #entity.unwrap()
+
   return open(path_to_article).read()
 
 # Answers a question from the information in article.
