@@ -33,17 +33,23 @@ pronouns = set(["he", "she", "it", "him", "her", "his","they","their","we",
 # This still needs to be implemented.
 def coref(path_to_article):
   subprocess.call(["./arkref.sh", "-input", path_to_article])
+  print open(path_to_article).read()
   tagged_article = open(path_to_article.replace("txt", "tagged")).read()
-  tagged_article = "<root>"+tagged_article+"</root>"
-  print tagged_article
+  tagged_article = "<root>"+tagged_article+"</root>" # trick arkref into doing entire doc
+  #print tagged_article
   soup = bs4.BeautifulSoup(tagged_article, "html.parser").root
   for entity in soup.find_all(True):
     if entity.string != None and entity.string.strip().lower() in pronouns:
       antecedent_id = entity["entityid"].split("_")[0]
       antecedent = soup.find(mentionid=antecedent_id)
-      #entity.string.replace_with(antecedent)
-      print antecedent
+      string = re.sub('<.*?>',' ',str(antecedent))
+      tok = nltk.word_tokenize(string)
+      ants = [(x,y) for x,y in nltk.pos_tag(tok) if y in {'NNP','NN'}]
+      entity.string.replace_with(' '.join(map(lambda (x,y):x,ants)))
+      #print 'entity is: '+entity.string 
     #entity.unwrap()
+  string2 = re.sub('<.*?>',' ',str(soup))
+  print string2
 
   return open(path_to_article).read()
 
@@ -65,30 +71,29 @@ def answer(question, article):
 if __name__ == '__main__':
   article_name = sys.argv[1]
 
-  for year in ("S08", "S09", "S10"):
-    print "Year:", year
-    prefix = "Question_Answer_Dataset_v1.1/"+year+"/"
-    question_answer_pairs = open(prefix+"question_answer_pairs.txt").readlines()
-    question_answer_pairs.pop(0)
-    for line in question_answer_pairs:
-      if not line.startswith(article_name): continue
-      line = line.lstrip(article_name)
-      end = line.find("?")
-      if end == -1: continue
-      question = line[:end+1].strip()
-      line = line[end+1:].split()
-      path_to_article = prefix+line.pop()+".txt"
-      difficulty_answerer = line.pop()
-      difficulty_questioner = line.pop()
-      correct_answer = " ".join(line)
+# for year in ("S08", "S09", "S10"):
+#    print "Year:", year
+#    prefix = "Question_Answer_Dataset_v1.1/"+year+"/"
+#    question_answer_pairs = open(prefix+"question_answer_pairs.txt").readlines()
+#    question_answer_pairs.pop(0)
+#    for line in question_answer_pairs:
+#      if not line.startswith(article_name): continue
+#      line = line.lstrip(article_name)
+#      end = line.find("?")
+#      if end == -1: continue
+#      question = line[:end+1].strip()
+#      line = line[end+1:].split()
+#      path_to_article = prefix+line.pop()+".txt"
+#      difficulty_answerer = line.pop()
+#      difficulty_questioner = line.pop()
+#      correct_answer = " ".join(line)
 
-      print "Question:", question
-      print "Difficulty from answerer:", difficulty_answerer
-      print "Difficulty from questioner:", difficulty_questioner
+    #print "Question:", question
+    #print "Difficulty from answerer:", difficulty_answerer
+    #print "Difficulty from questioner:", difficulty_questioner
 
       # Open the question file and start answering questions.
-      article = coref(path_to_article)
-      print "Our answer:", answer(question, article)
-      print "Correct answer:", correct_answer
-
-    print
+  article = coref('corefTest.txt')
+  print article
+    #print "Our answer:", answer(question, article)
+    #print "Correct answer:", correct_answer
