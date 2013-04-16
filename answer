@@ -26,32 +26,35 @@ def contains_negative(sent):
   return "no" in sent or "not" in sent or "n't" in sent
 
 # the set of pronouns, used for anaphora resolution
-pronouns = set(["he", "she", "it", "him", "her", "his","they","their","we",
-                "our","i","you","your","my","mine","yours","ours"])
+pronouns = set(["he", "she", "it", "its", "it's", "him", "her", "his","they",
+                "their","we", "our","i","you","your","my","mine","yours","ours"])
+
+resolved_articles = {}
 
 # Runs coreference resolution on the article using arkref.
 # This still needs to be implemented.
 def coref(path_to_article):
+  if path_to_article in resolved_articles:
+    return resolved_articles[path_to_article]
+
   subprocess.call(["./arkref.sh", "-input", path_to_article])
-  print open(path_to_article).read()
   tagged_article = open(path_to_article.replace("txt", "tagged")).read()
   tagged_article = "<root>"+tagged_article+"</root>" # trick arkref into doing entire doc
-  #print tagged_article
   soup = bs4.BeautifulSoup(tagged_article, "html.parser").root
   for entity in soup.find_all(True):
     if entity.string != None and entity.string.strip().lower() in pronouns:
       antecedent_id = entity["entityid"].split("_")[0]
       antecedent = soup.find(mentionid=antecedent_id)
-      string = re.sub('<.*?>',' ',str(antecedent))
-      tok = nltk.word_tokenize(string)
-      ants = [(x,y) for x,y in nltk.pos_tag(tok) if y in {'NNP','NN'}]
-      entity.string.replace_with(' '.join(map(lambda (x,y):x,ants)))
-      #print 'entity is: '+entity.string 
-    #entity.unwrap()
-  string2 = re.sub('<.*?>',' ',str(soup))
-  print string2
+      antecedent = str(antecedent).split(">", 1)[1].split("<", 1)[0]
+      #string = re.sub('<.*?>',' ',str(antecedent))
+      #tok = nltk.word_tokenize(string)
+      #ants = [(x,y) for x,y in nltk.pos_tag(tok) if y in {'NNP','NN'}]
+      entity.string.replace_with(antecedent)
+      #print 'entity is: '+entity.string
+  resolved = re.sub("<.*?>", "", str(soup))
+  resolved_articles[path_to_article] = resolved
 
-  return open(path_to_article).read()
+  return resolved
 
 # Answers a question from the information in article.
 # Ranks all the sentences and then returns the top choice.
@@ -65,35 +68,33 @@ def answer(question, article):
       if contains_negative(top): return "No"
       else: return "Yes"
     else:
-      return top
+      return top[0]
 
 # The main script
 if __name__ == '__main__':
   article_name = sys.argv[1]
 
-# for year in ("S08", "S09", "S10"):
-#    print "Year:", year
-#    prefix = "Question_Answer_Dataset_v1.1/"+year+"/"
-#    question_answer_pairs = open(prefix+"question_answer_pairs.txt").readlines()
-#    question_answer_pairs.pop(0)
-#    for line in question_answer_pairs:
-#      if not line.startswith(article_name): continue
-#      line = line.lstrip(article_name)
-#      end = line.find("?")
-#      if end == -1: continue
-#      question = line[:end+1].strip()
-#      line = line[end+1:].split()
-#      path_to_article = prefix+line.pop()+".txt"
-#      difficulty_answerer = line.pop()
-#      difficulty_questioner = line.pop()
-#      correct_answer = " ".join(line)
+for year in ("S08", "S09", "S10"):
+  print "Year:", year
+  prefix = "Question_Answer_Dataset_v1.1/"+year+"/"
+  question_answer_pairs = open(prefix+"question_answer_pairs.txt").readlines()
+  question_answer_pairs.pop(0)
+  for line in question_answer_pairs:
+    if not line.startswith(article_name): continue
+    line = line.lstrip(article_name)
+    end = line.find("?")
+    if end == -1: continue
+    question = line[:end+1].strip()
+    line = line[end+1:].split()
+    path_to_article = prefix+line.pop()+".txt"
+    difficulty_answerer = line.pop()
+    difficulty_questioner = line.pop()
+    correct_answer = " ".join(line)
 
-    #print "Question:", question
-    #print "Difficulty from answerer:", difficulty_answerer
-    #print "Difficulty from questioner:", difficulty_questioner
+    print "Question:", question
+    print "Difficulty from answerer:", difficulty_answerer
+    print "Difficulty from questioner:", difficulty_questioner
 
-      # Open the question file and start answering questions.
-  article = coref('corefTest.txt')
-  print article
-    #print "Our answer:", answer(question, article)
-    #print "Correct answer:", correct_answer
+    article = coref(path_to_article)
+    print "Our answer:", answer(question, article)
+    print "Correct answer:", correct_answer
