@@ -8,44 +8,34 @@ import nltk
 from nltk.stem import PorterStemmer
 import collections
 import numpy as np
-sys.path.append("modules")
-import lemma
 
-# Any keywords in the sentence will be these parts of speech
+# Ignore words that don't have these parts of speech when computing keywords
 key_POS = set(["CD","FW","NN","NNS","NNP","NPS","VB","VBD","VBG","VBN","VBP","VBZ"])
 # auxiliary verbs we should ignore
 aux = set(["is", "was", "did", "does", "do", "were", "are"])
 
-# we should probably change this to the WordNet lemmatizer, but this is ok for now
+# the porter stemmer! yay!
 ps = PorterStemmer()
 
+# check up to 5-grams for the bleu score
 MAX_NGRAMS = 5
 
 # Given a question, returns a list of keywords
 def getKeywords(question):
   tagged = nltk.tag.pos_tag(question)
-  #nltk.ne_chunk(tagged)
   tagged = [pair for pair in tagged if pair[1] in key_POS and pair[0].lower() not in aux]
-  result = []
-  for tag in tagged:
-    if tag[1] == "NNP":
-      # named entities aren't that helpful until we implement coreference resolution
-      result.append(tag[0])
-    else:
-      result.append(ps.stem(tag[0]))
-  return set(result)
+  return {ps.stem(tag[0]) for tag in tagged}
 
 # Given a question, return a list of each sentence in the article
 # with a score attached to it
 def getScoredSentences(question, article):
-  scored_sent = []
+  scored_sentences = []
   sentences = nltk.tokenize.sent_tokenize(article)
-  for sent in sentences:
-      if sent.strip() == "": continue
-      sentence = nltk.tokenize.word_tokenize(sent)
-      s = score(question, sentence)
-      scored_sent.append((sent, s))
-  return scored_sent
+  for sentence in sentences:
+      if sentence.strip() == "": continue
+      s = score(question, nltk.word_tokenize(sentence))
+      scored_sentences.append((sentence, s))
+  return scored_sentences
 
 # Scores a sentence based on how well we think it answers the question
 def score(question, sentence):
@@ -87,7 +77,6 @@ def count_ngrams(tokens, n, all_smaller=False):
       counts[tuple(tokens[i:i+k])] += 1
 
   return counts
-#end def
 
 def bleu_score(ref_ngrams, ref_len, pred_ngrams, pred_len, n):
   """Calculate the BLEU precision and recall from ngram counts.
@@ -110,7 +99,6 @@ def bleu_score(ref_ngrams, ref_len, pred_ngrams, pred_len, n):
 
     k = min(c, pred_ngrams[ngram])
     ngram_score[len(ngram) - 1] += k
-  #end for
 
   # compute the geometric mean of the ngrams precision/recall
   precision = np.mean(np.log(ngram_score / len(pred_ngrams)))
@@ -124,40 +112,3 @@ def bleu_score(ref_ngrams, ref_len, pred_ngrams, pred_len, n):
   recall = np.exp(recall)
 
   return precision, recall
-#end def
-
-
-# Compare the overlap of two sentences using ngrams
-# (up to trigrams). This is similar to the BLEU score.
-#def ngramWeight(question, sentence):
-#  #stem and take set intersections for unigrams
-#  uniQ = map(ps.stem, question)
-#  uniS = sentence
-#  unigram = set(uniQ).intersection(set(uniS))
-#
-#
-#  #get all bigram overlaps, rolls around end of sentence
-#  if len(uniQ) > 1 and len(uniS) > 1:
-#    bigramQ = set([uniQ[i-1]+uniQ[i] for i,word in enumerate(uniQ)])
-#    bigramS = set([uniS[i-1]+uniS[i] for i,word in enumerate(uniS)])
-#    bigram = bigramQ.intersection(bigramS)
-#  else:
-#      bigram = {}
-#
-#  if len(uniQ) > 2 and len(uniS) > 2:
-#    trigramQ = set([uniQ[i-2]+uniQ[i-1]+uniQ[i] for i,word in enumerate(uniQ)])
-#    trigramS = set([uniS[i-2]+uniS[i-1]+uniS[i] for i,word in enumerate(uniS)])
-#    trigram = trigramQ.intersection(trigramS)
-#  else:
-#      trigram = {}
-#
-#
-#  lam1 = 0.2
-#  lam2 = 0.3
-#  lam3 = 0.5
-#
-#  return lam1*len(unigram) + lam2*len(bigram) + lam3*len(trigram)
-
-# for testing
-if __name__ == '__main__':
-    print proximity(set(["the", "moon", "stroke"]), ["I",  "want", "to", "see", "the", "moon", "stroke"])

@@ -11,14 +11,12 @@ def lem(words):
 
   for word, tag in pos_tagged:
     temp = set({word})
-
     if tag[0] == 'N':
       for ss in wn.synsets(word, pos=wn.NOUN):
         temp.update(set(lemma.name for lemma in ss.lemmas))
     elif tag[0] == 'V':
       for ss in wn.synsets(word, pos=wn.VERB):
         temp.update(set(lemma.name for lemma in ss.lemmas))
-
     lemmaList.append(temp)
 
   return lemmaList

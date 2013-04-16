@@ -3,7 +3,6 @@
 
 import nltk
 
-#sample = open("para.txt").read()
 sample = 'I like Harvard and partitions'
 sentences = nltk.sent_tokenize(sample)
 tokenized_sentences = [nltk.word_tokenize(sentence) for sentence in sentences]
