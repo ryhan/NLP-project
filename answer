@@ -43,8 +43,15 @@ def answer(question, article):
 if __name__ == '__main__':
   article_name = sys.argv[1]
 
+  verbose = False
+  if (len(sys.argv) > 2):
+    print("verbose?")
+    if (sys.argv[2] =="--v" or sys.argv[2] == "-v"):
+      verbose = True
+
   for year in ("S08", "S09", "S10"):
-    print "Year:", year
+    if verbose:
+      print "Year:", year
     prefix = "Question_Answer_Dataset_v1.1/"+year+"/"
     question_answer_pairs = open(prefix+"question_answer_pairs.txt").readlines()
     question_answer_pairs.pop(0)
@@ -59,9 +66,16 @@ if __name__ == '__main__':
       difficulty_answerer = line.pop()
       difficulty_questioner = line.pop()
       correct_answer = " ".join(line)
-      print "Question:", question
-      print "Difficulty from answerer:", difficulty_answerer
-      print "Difficulty from questioner:", difficulty_questioner
+
+      if verbose:
+        print "Question:", question
+        print "Difficulty from answerer:", difficulty_answerer
+        print "Difficulty from questioner:", difficulty_questioner
+
       article = coref.process(path_to_article)
-      print "Our answer:", answer(question, article)
-      print "Correct answer:", correct_answer
+
+      if verbose:
+        print "Our answer:", answer(question, article)
+        print "Correct answer:", correct_answer
+      else:
+        print answer(question, article)
