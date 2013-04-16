@@ -3,13 +3,10 @@
 # coref.py
 
 # Useful tools which should be pre-installed
-import os, sys, errno
 import subprocess
 import re
-import itertools
 import nltk
-from nltk.stem import PorterStemmer
-import bs4
+from bs4 import BeautifulSoup
 
 # the set of pronouns, used for anaphora resolution
 pronouns = set(["he", "she", "it", "its", "it's", "him", "her", "his","they",
@@ -26,7 +23,7 @@ def process(path_to_article):
   subprocess.call(["./arkref.sh", "-input", path_to_article])
   tagged_article = open(path_to_article.replace("txt", "tagged")).read()
   tagged_article = "<root>"+tagged_article+"</root>" # trick arkref into doing entire doc
-  soup = bs4.BeautifulSoup(tagged_article, "html.parser").root
+  soup = BeautifulSoup(tagged_article, "html.parser").root
   for entity in soup.find_all(True):
     if entity.string != None and entity.string.strip().lower() in pronouns:
       antecedent_id = entity["entityid"].split("_")[0]
