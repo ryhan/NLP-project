@@ -35,7 +35,8 @@ def transform(sentence):
   tokens = nltk.word_tokenize(sentence)
   posTag = nltk.pos_tag([tokens[0]])[0]
 
-  add_why = (random.randint(0,1) == 1)
+  #add_why = (random.randint(0,1) == 1)
+  add_why = 0
 
   #if (tokens[1].upper() in BEING and posTag == 'PRP'):
   if (len(tokens) > 1 and tokens[1].upper() in BEING):

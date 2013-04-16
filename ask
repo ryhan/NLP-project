@@ -5,14 +5,18 @@
 
 # Useful tools which should be pre-installed
 import os, sys, errno
+import subprocess
 import re
 import itertools
 import nltk
+from nltk.stem import PorterStemmer
+import bs4
 
 # Import our modules from /modules
 sys.path.append("modules")
 import questionContentSelector
 import questionFromSentence
+import coref
 
 if __name__ == '__main__':
   path_to_article = sys.argv[1]
@@ -20,7 +24,9 @@ if __name__ == '__main__':
   # print("Generating " + str(num_questions) + " questions:")
 
   # Pre-process article content.
-  article_content = open(path_to_article).read()
+  #article_content = open(path_to_article).read()
+  #print (article_content)
+  article_content = coref.process(path_to_article)
 
   # Should probably apply co-reference resolution to article content here.
 
