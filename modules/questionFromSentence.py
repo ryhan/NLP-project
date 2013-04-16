@@ -6,6 +6,7 @@
 
 import re
 import nltk
+import random
 
 # GIVEN string sentence
 # RETURNS (question string, success boolean)
@@ -34,18 +35,28 @@ def transform(sentence):
   tokens = nltk.word_tokenize(sentence)
   posTag = nltk.pos_tag([tokens[0]])[0]
 
+  add_why = (random.randint(0,1) == 1)
+
   #if (tokens[1].upper() in BEING and posTag == 'PRP'):
   if (len(tokens) > 1 and tokens[1].upper() in BEING):
     tokens = [tokens[1].capitalize(), tokens[0].lower()] + tokens[2:]
 
+    if (add_why):
+      tokens = ["Why", tokens[0].lower()] + tokens[1:]
+
     question = " ".join(tokens)
     if ("," in question):
       question = question.split(",")[0] + "?"
+
     return (question, True)
 
   if (len(tokens) > 2 and tokens[2].upper() in BEING):
     tokens = [tokens[2].capitalize(), tokens[0].lower(), tokens[1].lower()] + tokens[3:]
     #return (" ".join(tokens), True)
+
+    if (add_why):
+      tokens = ["Why", tokens[0].lower()] + tokens[1:]
+
     question = " ".join(tokens)
     if ("," in question):
       question = question.split(",")[0] + "?"
