@@ -41,7 +41,6 @@ def process(path_to_article):
         #tok = nltk.word_tokenize(string)
         #ants = [(x,y) for x,y in nltk.pos_tag(tok) if y in {'NNP','NN'}]
         entity.string.replace_with(antecedent)
-        #print 'entity is: '+entity.string
     resolved = re.sub("<.*?>", "", str(soup))
   except:
     resolved = open(original_path).read()
