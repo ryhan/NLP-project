@@ -3,6 +3,7 @@ import math
 
 dicts = []
 
+# constructs a vector, for each word in question the tf-idf score with article
 def main(question, article):
   ddict = get_counts()
   for tok in nltk.word_tokenize(article):
@@ -10,7 +11,11 @@ def main(question, article):
 
   vec = []
   for tok in nltk.word_tokenize(question):
-    tf = ddict.get(tok, 0)
+
+    # count in article
+    tf = ddict.get(tok, 0) 
+
+    # total articles is 108 / number that have current token
     idf = math.log(float(108)/len(filter(lambda x:tok in x.keys(),dicts)) + 1)
     vec.append(tf*idf)
 
@@ -20,6 +25,7 @@ def main(question, article):
 
 articles_per_set = 9
 
+# goes through sample wiki articles and gets word counts
 def get_counts():
   counts = {}
   sets_per_year = 4
