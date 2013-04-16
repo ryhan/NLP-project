@@ -40,3 +40,5 @@ nosetests.xml
 *.parse
 *.osent
 *.sst
+NUL
+arkref_out.txt
