@@ -29,7 +29,7 @@ def contains_negative(sent):
 # Answers a question from the information in article.
 # Ranks all the sentences and then returns the top choice.
 def answer(question, article):
-    question = question.strip()
+    question = question.strip().rstrip("?").lower()
     question_type = questionClassifier.process(question)
     question = nltk.tokenize.word_tokenize(question)
     relevant = sourceContentSelector.getScoredSentences(question, article)
@@ -42,40 +42,45 @@ def answer(question, article):
 # The main script
 if __name__ == '__main__':
   article_name = sys.argv[1]
+  questions = open(sys.argv[2]).read().split("\n")
 
-  verbose = False
-  if (len(sys.argv) > 2):
-    print("verbose?")
-    if (sys.argv[2] =="--v" or sys.argv[2] == "-v"):
-      verbose = True
+  article = coref.process(article_name)
+  for question in questions:
+    print answer(question, article)
 
-  for year in ("S08", "S09", "S10"):
-    if verbose:
-      print "Year:", year
-    prefix = "Question_Answer_Dataset_v1.1/"+year+"/"
-    question_answer_pairs = open(prefix+"question_answer_pairs.txt").readlines()
-    question_answer_pairs.pop(0)
-    for line in question_answer_pairs:
-      if not line.startswith(article_name): continue
-      line = line.lstrip(article_name)
-      end = line.find("?")
-      if end == -1: continue
-      question = line[:end+1].strip()
-      line = line[end+1:].split()
-      path_to_article = prefix+line.pop()+".txt"
-      difficulty_answerer = line.pop()
-      difficulty_questioner = line.pop()
-      correct_answer = " ".join(line)
-
-      if verbose:
-        print "Question:", question
-        print "Difficulty from answerer:", difficulty_answerer
-        print "Difficulty from questioner:", difficulty_questioner
-
-      article = coref.process(path_to_article)
-
-      if verbose:
-        print "Our answer:", answer(question, article)
-        print "Correct answer:", correct_answer
-      else:
-        print answer(question, article)
+  #verbose = False
+  #if (len(sys.argv) > 2):
+  #  print("verbose?")
+  #  if (sys.argv[2] =="--v" or sys.argv[2] == "-v"):
+  #    verbose = True
+  #
+  #for year in ("S08", "S09", "S10"):
+  #  if verbose:
+  #    print "Year:", year
+  #  prefix = "Question_Answer_Dataset_v1.1/"+year+"/"
+  #  question_answer_pairs = open(prefix+"question_answer_pairs.txt").readlines()
+  #  question_answer_pairs.pop(0)
+  #  for line in question_answer_pairs:
+  #    if not line.startswith(article_name): continue
+  #    line = line.lstrip(article_name)
+  #    end = line.find("?")
+  #    if end == -1: continue
+  #    question = line[:end+1].strip()
+  #    line = line[end+1:].split()
+  #    path_to_article = prefix+line.pop()+".txt"
+  #    difficulty_answerer = line.pop()
+  #    difficulty_questioner = line.pop()
+  #    correct_answer = " ".join(line)
+  #
+  #    if verbose:
+  #      print "Question:", question
+  #      print "Difficulty from answerer:", difficulty_answerer
+  #      print "Difficulty from questioner:", difficulty_questioner
+  #
+  #    article = coref.process(path_to_article)
+  #
+  #    if verbose:
+  #      print "Our answer:", answer(question, article)
+  #      print "Correct answer:", correct_answer
+  #    else:
+  #      print answer(question, article)

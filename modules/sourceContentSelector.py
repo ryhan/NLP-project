@@ -33,7 +33,8 @@ def getScoredSentences(question, article):
   sentences = nltk.tokenize.sent_tokenize(article)
   for sentence in sentences:
       if sentence.strip() == "": continue
-      s = score(question, nltk.word_tokenize(sentence))
+      tokenized = nltk.word_tokenize(sentence.lower())
+      s = score(question, tokenized)
       scored_sentences.append((sentence, s))
   return scored_sentences
 
